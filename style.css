@@ -19,8 +19,8 @@ html {
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: #1f2937;
-    background-color: #ffffff;
+    color: #e5e7eb;
+    background-color: #0f0f0f;
 }
 
 /* ============================================
@@ -30,7 +30,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     margin-bottom: 1rem;
-    color: #111827;
+    color: #fbbf24;
     font-weight: 600;
 }
 
@@ -55,19 +55,47 @@ p {
 }
 
 a {
-    color: #6366f1;
+    color: #60a5fa;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 a:hover {
-    color: #4f46e5;
+    color: #93c5fd;
     text-decoration: underline;
 }
 
 /* ============================================
    3. Layout Containers
    ============================================ */
+
+/* Registration Banner */
+.registration-banner {
+    background: linear-gradient(90deg, #dc2626 0%, #b91c1c 100%);
+    color: #fef2f2;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+    animation: pulse-banner 2s infinite;
+}
+
+.registration-banner p {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+@keyframes pulse-banner {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(220, 38, 38, 0.5);
+    }
+}
 
 .container {
     max-width: 900px;
@@ -80,7 +108,7 @@ a:hover {
    ============================================ */
 
 .hero {
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     color: white;
     padding: 8rem 1.5rem;
     text-align: center;
@@ -88,6 +116,21 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 3px solid #fbbf24;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(96, 165, 250, 0.1) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .hero-content {
@@ -138,7 +181,7 @@ a:hover {
 
 .info {
     padding: 6rem 1.5rem;
-    background-color: #f9fafb;
+    background-color: #1a1a1a;
 }
 
 .info h2 {
@@ -154,27 +197,28 @@ a:hover {
 }
 
 .detail-card {
-    background: white;
+    background: linear-gradient(135deg, #1f1f3d 0%, #2a2a4a 100%);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 20px rgba(251, 191, 36, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 3px solid #fbbf24;
 }
 
 .detail-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 10px 25px rgba(251, 191, 36, 0.2);
 }
 
 .detail-card h3 {
-    color: #6366f1;
+    color: #fbbf24;
     margin-bottom: 0.75rem;
     font-size: 1.3rem;
 }
 
 .detail-card p {
-    color: #6b7280;
+    color: #d1d5db;
     font-size: 1.1rem;
     margin-bottom: 0;
 }
@@ -183,18 +227,19 @@ a:hover {
     max-width: 700px;
     margin: 0 auto;
     padding: 3rem 2rem;
-    background: white;
+    background: linear-gradient(135deg, #1f1f3d 0%, #2a2a4a 100%);
     border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border-top: 3px solid #fbbf24;
 }
 
 .description h3 {
-    color: #6366f1;
+    color: #fbbf24;
     text-align: center;
 }
 
 .description p {
-    color: #6b7280;
+    color: #d1d5db;
     line-height: 1.8;
     text-align: center;
 }
@@ -203,13 +248,14 @@ a:hover {
     max-width: 700px;
     margin: 3rem auto 0;
     padding: 2rem;
-    background: white;
+    background: linear-gradient(135deg, #1f1f3d 0%, #2a2a4a 100%);
     border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border-top: 3px solid #fbbf24;
 }
 
 .how-to-reach h3 {
-    color: #6366f1;
+    color: #fbbf24;
     text-align: center;
 }
 
@@ -222,31 +268,31 @@ a:hover {
 
 .transport-card {
     padding: 1.5rem;
-    background: #f9fafb;
+    background: rgba(251, 191, 36, 0.05);
     border-radius: 8px;
-    border-left: 4px solid #6366f1;
+    border-left: 4px solid #fbbf24;
 }
 
 .transport-card h4 {
-    color: #6366f1;
+    color: #fbbf24;
     margin-bottom: 0.75rem;
     font-size: 1.1rem;
 }
 
 .transport-card p {
-    color: #6b7280;
+    color: #d1d5db;
     font-size: 0.95rem;
     margin-bottom: 0;
     line-height: 1.6;
 }
 
 .transport-card em {
-    color: #4f46e5;
+    color: #60a5fa;
     font-style: italic;
 }
 
 .detail-card a {
-    color: #6366f1;
+    color: #60a5fa;
     font-weight: 500;
     text-decoration: none;
     display: inline-block;
@@ -258,23 +304,106 @@ a:hover {
 }
 
 /* ============================================
+   5.5 Food & Drinks Section
+   ============================================ */
+
+.food-drinks {
+    padding: 6rem 1.5rem;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-top: 3px solid #fbbf24;
+    border-bottom: 3px solid #fbbf24;
+}
+
+.food-drinks h2 {
+    text-align: center;
+    color: #fbbf24;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.food-card {
+    background: rgba(251, 191, 36, 0.05);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(251, 191, 36, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(251, 191, 36, 0.25), inset 0 0 20px rgba(251, 191, 36, 0.08);
+}
+
+.food-card h3 {
+    color: #fbbf24;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.food-card p {
+    color: #d1d5db;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.food-card strong {
+    color: #fef3c7;
+}
+
+.food-note {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(96, 165, 250, 0.1);
+    border-radius: 12px;
+    border-left: 4px solid #60a5fa;
+}
+
+.food-note p {
+    color: #d1d5db;
+    margin-bottom: 0;
+    line-height: 1.8;
+}
+
+/* ============================================
    6. RSVP Section
    ============================================ */
 
 .rsvp {
     padding: 6rem 1.5rem;
-    background: white;
+    background: #1a1a1a;
 }
 
 .rsvp h2 {
     text-align: center;
-    color: #111827;
+    color: #fbbf24;
+}
+
+.registration-highlight {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.15) 0%, rgba(220, 38, 38, 0.05) 100%);
+    border-radius: 8px;
+    border-left: 4px solid #dc2626;
+}
+
+.registration-highlight p {
+    color: #fef2f2;
+    margin-bottom: 0;
+    font-weight: 500;
 }
 
 .rsvp-intro {
     text-align: center;
     font-size: 1.1rem;
-    color: #6b7280;
+    color: #d1d5db;
     margin-bottom: 2.5rem;
     max-width: 600px;
     margin-left: auto;
@@ -284,10 +413,11 @@ a:hover {
 .form-wrapper {
     margin: 3rem 0;
     padding: 2rem;
-    background: #f9fafb;
+    background: linear-gradient(135deg, #1f1f3d 0%, #2a2a4a 100%);
     border-radius: 12px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid rgba(251, 191, 36, 0.2);
     overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .form-wrapper iframe {
@@ -295,6 +425,7 @@ a:hover {
     border-radius: 8px;
     display: block;
     width: 100%;
+    filter: invert(0.95) hue-rotate(180deg);
 }
 
 .form-note {
@@ -305,7 +436,7 @@ a:hover {
 }
 
 .form-note a {
-    color: #6366f1;
+    color: #60a5fa;
     font-weight: 500;
 }
 
@@ -314,24 +445,25 @@ a:hover {
    ============================================ */
 
 .footer {
-    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
     color: white;
     padding: 4rem 1.5rem;
     text-align: center;
+    border-top: 3px solid #fbbf24;
 }
 
 .footer p {
-    color: rgba(255, 255, 255, 0.9);
+    color: #d1d5db;
     margin-bottom: 1rem;
 }
 
 .footer strong {
-    color: #c7d2fe;
+    color: #fbbf24;
     font-weight: 600;
 }
 
 .footer-meta {
-    color: rgba(255, 255, 255, 0.6);
+    color: #6b7280;
     font-size: 0.95rem;
     margin-bottom: 0;
 }
@@ -361,6 +493,15 @@ a:hover {
 
     .info {
         padding: 4rem 1.5rem;
+    }
+
+    .food-drinks {
+        padding: 4rem 1.5rem;
+    }
+
+    .food-grid {
+        gap: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     .details-grid {
@@ -424,6 +565,24 @@ a:hover {
 
     .info {
         padding: 2.5rem 1rem;
+    }
+
+    .food-drinks {
+        padding: 2.5rem 1rem;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .food-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .food-note {
+        padding: 1.5rem 1rem;
     }
 
     .details-grid {
