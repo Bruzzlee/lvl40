@@ -137,6 +137,20 @@ a:hover {
     font-size: 1rem;
 }
 
+.registration-banner a {
+    color: #78350f;
+    text-decoration: none;
+    border-bottom: 2px solid #78350f;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.registration-banner a:hover {
+    color: #451a03;
+    border-bottom-color: #451a03;
+    text-decoration: none;
+}
+
 @keyframes gentle-pulse {
     0%, 100% {
         box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
