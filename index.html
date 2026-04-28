@@ -8,18 +8,31 @@
     
     <title>Level 40 Unlocked 🎉</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Set language from localStorage or default to English
+        const savedLang = localStorage.getItem('partyLang') || 'en';
+        document.documentElement.lang = savedLang;
+        document.documentElement.setAttribute('data-lang', savedLang);
+    </script>
 </head>
 <body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn" data-lang="en" title="English">EN</button>
+        <span class="lang-separator">/</span>
+        <button class="lang-btn" data-lang="de" title="Deutsch">DE</button>
+    </div>
+
     <!-- Registration Required Banner -->
     <div class="registration-banner">
-        <p>⚠️ <strong>Registration is MANDATORY</strong> — Please complete the form below to confirm your attendance!</p>
+        <p><span data-en="⚠️ ">⚠️ </span><strong data-en="Registration is MANDATORY" data-de="Anmeldung ist PFLICHT">Registration is MANDATORY</strong> <span data-en="— Please complete the form below to confirm your attendance!" data-de="— Bitte füllen Sie das untenstehende Formular aus, um Ihre Teilnahme zu bestätigen!">— Please complete the form below to confirm your attendance!</span></p>
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1 class="headline">🎉 Level 40 Unlocked</h1>
-            <p class="subheadline">
+            <p class="subheadline" data-en="Join us for an unforgettable celebration of friendship, fun, and leveling up to new heights!" data-de="Begleite uns zu einer unvergesslichen Feier von Freundschaft, Spaß und neuen Höhen!">
                 Join us for an unforgettable celebration of friendship, fun, and leveling up to new heights!
             </p>
         </div>
@@ -28,32 +41,32 @@
     <!-- Info Section -->
     <section class="info">
         <div class="container">
-            <h2>Party Details</h2>
+            <h2 data-en="Party Details" data-de="Party-Details">Party Details</h2>
             
             <div class="details-grid">
                 <div class="detail-card">
-                    <h3>📅 Date</h3>
+                    <h3 data-en="📅 Date" data-de="📅 Datum">📅 Date</h3>
                     <p>Friday, August 15, 2026</p>
                 </div>
                 
                 <div class="detail-card">
-                    <h3>🕒 Time</h3>
-                    <p>4:00 PM (16:00) – Open End</p>
+                    <h3 data-en="🕒 Time" data-de="🕒 Uhrzeit">🕒 Time</h3>
+                    <p data-en="4:00 PM (16:00) – Open End" data-de="16:00 Uhr – Open End">4:00 PM (16:00) – Open End</p>
                 </div>
                 
                 <div class="detail-card">
-                    <h3>📍 Location</h3>
+                    <h3 data-en="📍 Location" data-de="📍 Ort">📍 Location</h3>
                     <p>
                         Illnauerstrasse 50<br>
                         8307 Illnau-Effretikon<br>
-                        <a href="https://maps.app.goo.gl/5CDeeTHcgaWRwJU28" target="_blank">Open in Google Maps</a>
+                        <a href="https://maps.app.goo.gl/5CDeeTHcgaWRwJU28" target="_blank" data-en="Open in Google Maps" data-de="In Google Maps öffnen">Open in Google Maps</a>
                     </p>
                 </div>
             </div>
 
             <div class="description">
-                <h3>About This Party</h3>
-                <p>
+                <h3 data-en="About This Party" data-de="Über diese Party">About This Party</h3>
+                <p data-en="Forty years of memories, laughs, and adventures! We're celebrating Level 40 with good friends, great food, and even better company. Whether you're coming for the afternoon vibes, evening festivities, or late-night fun, there's something for everyone. Come as you are, and let's make this milestone unforgettable!" data-de="Vierzig Jahre voller Erinnerungen, Lachen und Abenteuer! Wir feiern Level 40 mit guten Freunden, leckerem Essen und großartiger Gesellschaft. Egal ob du am Nachmittag kommst, die Abendfeierlichkeiten genießt oder die Nacht durchmachen möchtest – es ist für jeden etwas dabei. Komm wie du bist und lass uns diesen Meilenstein unvergesslich machen!">
                     Forty years of memories, laughs, and adventures! We're celebrating Level 40 with good friends, 
                     great food, and even better company. Whether you're coming for the afternoon vibes, evening festivities, 
                     or late-night fun, there's something for everyone. Come as you are, and let's make this milestone unforgettable!
@@ -61,18 +74,18 @@
             </div>
 
             <div class="how-to-reach">
-                <h3>How to Reach Us</h3>
+                <h3 data-en="How to Reach Us" data-de="Wie du uns erreichst">How to Reach Us</h3>
                 <div class="transport-options">
                     <div class="transport-card">
-                        <h4>🚗 By Car</h4>
-                        <p>Parking spaces available on-site</p>
+                        <h4 data-en="🚗 By Car" data-de="🚗 Mit dem Auto">🚗 By Car</h4>
+                        <p data-en="Parking spaces available on-site" data-de="Parkplätze sind vor Ort verfügbar">Parking spaces available on-site</p>
                     </div>
                     <div class="transport-card">
-                        <h4>🚂 By Public Transport</h4>
+                        <h4 data-en="🚂 By Public Transport" data-de="🚂 Mit öffentlichen Verkehrsmitteln">🚂 By Public Transport</h4>
                         <p>
-                            <strong>From Effretikon Station:</strong><br>
-                            <em>Option 1:</em> Walk 17 minutes (1.2 km)<br>
-                            <em>Option 2:</em> Take Bus 652 to "Lindenwiese" stop, then 3-minute walk (260 m)
+                            <strong data-en="From Effretikon Station:" data-de="Von Effretikon Bahnhof:">From Effretikon Station:</strong><br>
+                            <em data-en="Option 1:" data-de="Option 1:">Option 1:</em><span data-en=" Walk 17 minutes (1.2 km)" data-de=" 17 Minuten zu Fuß (1,2 km)"> Walk 17 minutes (1.2 km)</span><br>
+                            <em data-en="Option 2:" data-de="Option 2:">Option 2:</em><span data-en=" Take Bus 652 to \"Lindenwiese\" stop, then 3-minute walk (260 m)" data-de=" Nehmen Sie Bus 652 bis zur Haltestelle „Lindenwiese", dann 3 Minuten zu Fuß (260 m)"> Take Bus 652 to "Lindenwiese" stop, then 3-minute walk (260 m)</span>
                         </p>
                     </div>
                 </div>
@@ -83,28 +96,28 @@
     <!-- Food & Drinks Section -->
     <section class="food-drinks">
         <div class="container">
-            <h2>🍖 Food & Drinks</h2>
+            <h2 data-en="🍖 Food & Drinks" data-de="🍖 Essen & Getränke">🍖 Food & Drinks</h2>
             
             <div class="food-grid">
                 <div class="food-card">
-                    <h3>🔥 Grills & BBQ</h3>
-                    <p>
+                    <h3 data-en="🔥 Grills & BBQ" data-de="🔥 Grills & Grillen">🔥 Grills & BBQ</h3>
+                    <p data-en="We'll have 2 grills running all day! Bring your own meat and sides, or enjoy what others bring. First-come, first-served for grill time!" data-de="Wir haben den ganzen Tag über 2 Grills am Laufen! Bring dein eigenes Fleisch und Beilagen mit, oder genieße, was andere mitbringen. Wer zuerst kommt, mahlt zuerst!">
                         We'll have <strong>2 grills running</strong> all day! Bring your own meat and sides, or enjoy 
                         what others bring. First-come, first-served for grill time!
                     </p>
                 </div>
                 
                 <div class="food-card">
-                    <h3>🍽️ Food</h3>
-                    <p>
+                    <h3 data-en="🍽️ Food" data-de="🍽️ Essen">🍽️ Food</h3>
+                    <p data-en="Organized food based on your registration: We'll coordinate what's being brought so we have a great mix. No duplicates, no stress!" data-de="Organisiertes Essen basierend auf deiner Anmeldung: Wir koordinieren, was mitgebracht wird, damit wir eine großartige Auswahl haben. Keine Duplikate, kein Stress!">
                         <strong>Organized food based on your registration:</strong> We'll coordinate what's being brought 
                         so we have a great mix. No duplicates, no stress!
                     </p>
                 </div>
                 
                 <div class="food-card">
-                    <h3>🍺 Beverages</h3>
-                    <p>
+                    <h3 data-en="🍺 Beverages" data-de="🍺 Getränke">🍺 Beverages</h3>
+                    <p data-en="Drinks are included! Beer taps with special craft beers on tap, plus soft drinks and water. Cheers! 🍻" data-de="Getränke sind inklusive! Bierhähne mit speziellen Craft-Bieren, plus Softdrinks und Wasser. Prost! 🍻">
                         <strong>Drinks are included!</strong> Beer taps with special craft beers on tap, plus soft drinks 
                         and water. Cheers! 🍻
                     </p>
@@ -112,10 +125,8 @@
             </div>
 
             <div class="food-note">
-                <p>
-                    <strong>Want to contribute?</strong> In the registration form, let us know what food items you'd like to bring 
-                    (salad, dessert, sides, etc.) or if you'll bring your own meat for the grill. We'll keep track of everything 
-                    to make sure we have a balanced spread!
+                <p data-en="Want to contribute? In the registration form, let us know what food items you'd like to bring (salad, dessert, sides, etc.) or if you'll bring your own meat for the grill. We'll keep track of everything to make sure we have a balanced spread!" data-de="Möchtest du etwas beitragen? Lass uns im Registrierungsformular wissen, welche Lebensmittel du mitbringen möchtest (Salat, Dessert, Beilagen, etc.) oder ob du dein eigenes Fleisch für den Grill mitbringst. Wir führen über alles Buch, um sicherzustellen, dass wir eine ausgewogene Auswahl haben!">
+                    <strong data-en="Want to contribute?" data-de="Möchtest du etwas beitragen?">Want to contribute?</strong><span data-en=" In the registration form, let us know what food items you'd like to bring (salad, dessert, sides, etc.) or if you'll bring your own meat for the grill. We'll keep track of everything to make sure we have a balanced spread!" data-de=" Lass uns im Registrierungsformular wissen, welche Lebensmittel du mitbringen möchtest (Salat, Dessert, Beilagen, etc.) oder ob du dein eigenes Fleisch für den Grill mitbringst. Wir führen über alles Buch, um sicherzustellen, dass wir eine ausgewogene Auswahl haben!"> In the registration form, let us know what food items you'd like to bring (salad, dessert, sides, etc.) or if you'll bring your own meat for the grill. We'll keep track of everything to make sure we have a balanced spread!</span>
                 </p>
             </div>
         </div>
@@ -124,11 +135,11 @@
     <!-- RSVP Section -->
     <section class="rsvp">
         <div class="container">
-            <h2>🎯 Let's Know You're Coming!</h2>
+            <h2 data-en="🎯 Let's Know You're Coming!" data-de="🎯 Sag uns Bescheid, dass du kommst!">🎯 Let's Know You're Coming!</h2>
             <div class="registration-highlight">
-                <p><strong>Registration is required to attend.</strong> Please complete the form below with your name, time preferences, and food contributions.</p>
+                <p><strong data-en="Registration is required to attend." data-de="Anmeldung ist erforderlich, um teilzunehmen.">Registration is required to attend.</strong> <span data-en="Please complete the form below with your name, time preferences, and food contributions." data-de="Bitte füllen Sie das folgende Formular mit Ihrem Namen, Zeitpräferenzen und Lebensmittelbeiträgen aus.">Please complete the form below with your name, time preferences, and food contributions.</span></p>
             </div>
-            <p class="rsvp-intro">
+            <p class="rsvp-intro" data-en="Help us plan the perfect party by filling out the form!" data-de="Hilf uns, die perfekte Party zu planen, indem du das Formular ausfüllst!">
                 Help us plan the perfect party by filling out the form!
             </p>
 
@@ -184,7 +195,7 @@
             </div>
 
             <p class="form-note">
-                Questions? <a href="mailto:your-email@example.com">Get in touch</a> — we're here to help!
+                <span data-en="Questions? " data-de="Fragen? ">Questions? </span><a href="mailto:your-email@example.com" data-en="Get in touch" data-de="Kontaktiere uns">Get in touch</a> <span data-en=" — we're here to help!" data-de=" — wir sind hier, um zu helfen!"> — we're here to help!</span>
             </p>
         </div>
     </section>
@@ -193,13 +204,15 @@
     <footer class="footer">
         <div class="container">
             <p>
-                <strong>Thanks for celebrating this milestone with us!</strong><br>
-                Questions? Let's talk! Reach out anytime.
+                <strong data-en="Thanks for celebrating this milestone with us!" data-de="Danke, dass du diesen Meilenstein mit uns feierst!">Thanks for celebrating this milestone with us!</strong><br>
+                <span data-en="Questions? Let's talk! Reach out anytime." data-de="Fragen? Lass uns reden! Kontaktiere uns jederzeit.">Questions? Let's talk! Reach out anytime.</span>
             </p>
             <p class="footer-meta">
                 Made with ❤️ for Level 40
             </p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

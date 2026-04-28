@@ -16,6 +16,55 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ============================================
+   1.5 Language Switcher
+   ============================================ */
+
+.language-switcher {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: #d1d5db;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    letter-spacing: 0.05em;
+}
+
+.lang-btn:hover {
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.1);
+}
+
+.lang-btn.active {
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.2);
+    border-bottom: 2px solid #fbbf24;
+}
+
+.lang-separator {
+    color: #6b7280;
+    margin: 0 0.25rem;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
@@ -533,6 +582,17 @@ a:hover {
 
 /* Small phones (480px and down) */
 @media (max-width: 480px) {
+    .language-switcher {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .lang-btn {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.4rem;
+    }
+
     html {
         font-size: 14px;
     }
