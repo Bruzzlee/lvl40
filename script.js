@@ -6,12 +6,14 @@
 let translations = {};
 
 // Initialize on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
+    console.log('DOMContentLoaded fired');
+    
     // Immediately attach button handlers (don't wait for JSON)
     initLanguageSwitcher();
     
-    // Load translations asynchronously
-    loadTranslations();
+    // Load translations and apply immediately
+    await loadTranslations();
 });
 
 // Load translations from JSON file
