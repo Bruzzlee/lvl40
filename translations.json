@@ -8,8 +8,8 @@
     "de": "— es hilft mir, die perfekte Feier zu planen!"
   },
   "hero_intro": {
-    "en": "I — Che, Leo, Lee, Leandro, Chegelini, MrKenobi, MrLemi — would love to personally invite you to celebrate my 40th birthday with me. This party is about friendship, good vibes, great beer, and spending time together. I'm really happy you're here, and I hope you can join the celebration!",
-    "de": "Ich — Che, Leo, Lee, Leandro, Chegelini, MrKenobi, MrLemi — würde mich freuen, dich persönlich zur Feier meines 40. Geburtstags einzuladen. Diese Party dreht sich um Freundschaft, gute Vibes, exzellentem Bier und gemeinsame Zeit. Ich freue mich, dass du hier bist, und hoffe, du kannst bei der Feier dabei sein!"
+    "en": "I, aka Che, Leo, Lee, Leandro, Chegelini, MrKenobi, or MrLemi—cordially invite you to celebrate my 40th birthday with me. This party is all about friendship, great beer, good vibes, and having a wonderful time together. I hope you can join us for the celebration!",
+    "de": "Ich, aka Che, Leo, Lee, Leandro, Chegelini, MrKenobi oder MrLemi, lade dich herzlich ein, meinen 40. Geburtstag mit mir zu feiern. Diese Party steht für Freundschaft, exzellentes Bier,gute Vibes und eine schöne gemeinsame Zeit. Ich hoffe, du kannst bei der Feier dabei sein!"
   },
   "party_details": {
     "en": "Party Details",
@@ -24,7 +24,7 @@
     "de": "🕒 Uhrzeit"
   },
   "time_value": {
-    "en": "4:00 PM (16:00) – Open End",
+    "en": "4:00 PM – Open End",
     "de": "16:00 Uhr – Open End"
   },
   "location_label": {
@@ -40,12 +40,12 @@
     "de": "Über diese Party"
   },
   "about_text": {
-    "en": "Forty years of memories, laughs, and adventures! I'm celebrating Level 40 with good friends, great beer, and even better company. Whether you're coming for the afternoon vibes, evening festivities, or late-night fun, there's something for everyone. Come as you are, and let's make this milestone unforgettable!",
-    "de": "Vierzig Jahre voller Erinnerungen, Lachen und Abenteuer! Ich feiere Level 40 mit guten Freunden, exzellentem Bier und grossartiger Gesellschaft. Egal ob du am Nachmittag kommst, die Abendfeierlichkeiten geniessst oder die Nacht durchmachen möchtest – es ist für jeden etwas dabei. Komm wie du bist und lass uns diesen Meilenstein unvergesslich machen!"
+    "en": "Forty years full of memories, laughter, and adventure! I’m celebrating my level-up with great beer and wonderful company. Whether you’re stopping by in the afternoon, joining the evening festivities, or staying up all night—there’s something for everyone. Come as you are, and let’s make this milestone unforgettable!",
+    "de": "Vierzig Jahre voller Erinnerungen, Lachen und Abenteuer! Ich feiere mein Level-Up mit exzellentem Bier und grossartiger Gesellschaft. Egal ob du am Nachmittag kommst, die Abendfeierlichkeiten geniessst oder die Nacht durchmachen möchtest – es ist für jeden etwas dabei. Komm wie du bist und lass uns diesen Meilenstein unvergesslich machen!"
   },
   "how_to_reach": {
-    "en": "How to Reach Me",
-    "de": "Wie du mich erreichst"
+    "en": "How to get here",
+    "de": "Wie du anreist"
   },
   "by_car": {
     "en": "🚗 By Car",
@@ -76,28 +76,20 @@
     "de": "Option 2:"
   },
   "bus_info": {
-    "en": " Take Bus 652 to \"Lindenwiese\" stop, then 3-minute walk (260 m)",
+    "en": " Take Bus 652 to Lindenwiese stop, then 3-minute walk (260 m)",
     "de": " Nimm den Bus 652 bis zur Haltestelle Lindenwiese, dann 3 Minuten zu Fuss (260 m)"
   },
   "food_drinks": {
     "en": "🍖 Food & Drinks",
     "de": "🍖 Essen & Getränke"
   },
-  "grills_label": {
-    "en": "🔥 Grills & BBQ",
-    "de": "🔥 Grills & Grillen"
-  },
-  "grills_text": {
-    "en": "I'll have 2 grills running all day! Bring your own meat and sides, or enjoy what I organize based on your registration. First-come, first-served!",
-    "de": "Ich habe den ganzen Tag über 2 Grills am Laufen! Bring dein eigenes Fleisch und Beilagen mit, oder geniesse, was ich basierend auf deiner Anmeldung organisiere. Wer zuerst kommt, mahlt zuerst!"
-  },
   "food_label": {
     "en": "🍽️ Food",
     "de": "🍽️ Essen"
   },
   "food_text": {
-    "en": "Organized food based on your registration: I'll coordinate what's being brought so you have a great mix.",
-    "de": "Organisiertes Essen basierend auf deiner Anmeldung: Ich koordiniere, was mitgebracht wird, damit du eine grossartige Auswahl hast."
+    "en": "I'll have one grill and one fire place 🔥 running all day! Enjoy what I organize based on your registration or bring your own BBQ food. Side dishes are being organized.",
+    "de": "Ich habe den ganzen Tag über einen Grill und eine Feuerstelle am Laufen! Geniesse, was ich basierend auf den Anmeldungen organisiere oder bring deine eigene Grillwaren mit. Beilagen werden organisiert."
   },
   "beverages_label": {
     "en": "🍺 Beverages",
