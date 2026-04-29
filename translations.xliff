@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="de" datatype="plaintext" original="translations">
+    <body>
+      <trans-unit id="register_banner_link">
+        <source>Please register if you haven't already</source>
+        <target>Bitte melde dich an, wenn du das noch nicht getan hast</target>
+      </trans-unit>
+      
+      <trans-unit id="register_banner_help">
+        <source>— it helps me plan the perfect celebration for you!</source>
+        <target>— es hilft mir, die perfekte Feier zu planen!</target>
+      </trans-unit>
+      
+      <trans-unit id="hero_intro">
+        <source>I — Che, Leo, Lee, Leandro, Chegelini, MrKenobi, MrLemi — would love to personally invite you to celebrate my 40th birthday with me. This party is about friendship, good vibes, great beer, and spending time together. I'm really happy you're here, and I hope you can join the celebration!</source>
+        <target>Ich — Che, Leo, Lee, Leandro, Chegelini, MrKenobi, MrLemi — würde mich freuen, dich persönlich zur Feier meines 40. Geburtstags einzuladen. Diese Party dreht sich um Freundschaft, gute Vibes, exzellentem Bier und gemeinsame Zeit. Ich freue mich, dass du hier bist, und hoffe, du kannst bei der Feier dabei sein!</target>
+      </trans-unit>
+      
+      <trans-unit id="party_details">
+        <source>Party Details</source>
+        <target>Party-Details</target>
+      </trans-unit>
+      
+      <trans-unit id="date_label">
+        <source>📅 Date</source>
+        <target>📅 Datum</target>
+      </trans-unit>
+      
+      <trans-unit id="time_label">
+        <source>🕒 Time</source>
+        <target>🕒 Uhrzeit</target>
+      </trans-unit>
+      
+      <trans-unit id="time_value">
+        <source>4:00 PM (16:00) – Open End</source>
+        <target>16:00 Uhr – Open End</target>
+      </trans-unit>
+      
+      <trans-unit id="location_label">
+        <source>📍 Location</source>
+        <target>📍 Ort</target>
+      </trans-unit>
+      
+      <trans-unit id="location_link">
+        <source>Open in Google Maps</source>
+        <target>In Google Maps öffnen</target>
+      </trans-unit>
+      
+      <trans-unit id="about_party">
+        <source>About This Party</source>
+        <target>Über diese Party</target>
+      </trans-unit>
+      
+      <trans-unit id="about_text">
+        <source>Forty years of memories, laughs, and adventures! I'm celebrating Level 40 with good friends, great beer, and even better company. Whether you're coming for the afternoon vibes, evening festivities, or late-night fun, there's something for everyone. Come as you are, and let's make this milestone unforgettable!</source>
+        <target>Vierzig Jahre voller Erinnerungen, Lachen und Abenteuer! Ich feiere Level 40 mit guten Freunden, exzellentem Bier und grossartiger Gesellschaft. Egal ob du am Nachmittag kommst, die Abendfeierlichkeiten geniessst oder die Nacht durchmachen möchtest – es ist für jeden etwas dabei. Komm wie du bist und lass uns diesen Meilenstein unvergesslich machen!</target>
+      </trans-unit>
+      
+      <trans-unit id="how_to_reach">
+        <source>How to Reach Me</source>
+        <target>Wie du mich erreichst</target>
+      </trans-unit>
+      
+      <trans-unit id="by_car">
+        <source>🚗 By Car</source>
+        <target>🚗 Mit dem Auto</target>
+      </trans-unit>
+      
+      <trans-unit id="parking_text">
+        <source>Parking spaces available on-site</source>
+        <target>Parkplätze sind vor Ort verfügbar</target>
+      </trans-unit>
+      
+      <trans-unit id="by_transport">
+        <source>🚂 By Public Transport</source>
+        <target>🚂 Mit öffentlichen Verkehrsmitteln</target>
+      </trans-unit>
+      
+      <trans-unit id="from_station">
+        <source>From Effretikon Station:</source>
+        <target>Von Effretikon Bahnhof:</target>
+      </trans-unit>
+      
+      <trans-unit id="option1">
+        <source>Option 1:</source>
+        <target>Option 1:</target>
+      </trans-unit>
+      
+      <trans-unit id="walk_time">
+        <source> Walk 17 minutes (1.2 km)</source>
+        <target> 17 Minuten zu Fuss (1,2 km)</target>
+      </trans-unit>
+      
+      <trans-unit id="option2">
+        <source>Option 2:</source>
+        <target>Option 2:</target>
+      </trans-unit>
+      
+      <trans-unit id="bus_info">
+        <source> Take Bus 652 to "Lindenwiese" stop, then 3-minute walk (260 m)</source>
+        <target> Nimm den Bus 652 bis zur Haltestelle Lindenwiese, dann 3 Minuten zu Fuss (260 m)</target>
+      </trans-unit>
+      
+      <trans-unit id="food_drinks">
+        <source>🍖 Food & Drinks</source>
+        <target>🍖 Essen & Getränke</target>
+      </trans-unit>
+      
+      <trans-unit id="grills_label">
+        <source>🔥 Grills & BBQ</source>
+        <target>🔥 Grills & Grillen</target>
+      </trans-unit>
+      
+      <trans-unit id="grills_text">
+        <source>I'll have 2 grills running all day! Bring your own meat and sides, or enjoy what I organize based on your registration. First-come, first-served!</source>
+        <target>Ich habe den ganzen Tag über 2 Grills am Laufen! Bring dein eigenes Fleisch und Beilagen mit, oder geniesse, was ich basierend auf deiner Anmeldung organisiere. Wer zuerst kommt, mahlt zuerst!</target>
+      </trans-unit>
+      
+      <trans-unit id="food_label">
+        <source>🍽️ Food</source>
+        <target>🍽️ Essen</target>
+      </trans-unit>
+      
+      <trans-unit id="food_text">
+        <source>Organized food based on your registration: I'll coordinate what's being brought so you have a great mix.</source>
+        <target>Organisiertes Essen basierend auf deiner Anmeldung: Ich koordiniere, was mitgebracht wird, damit du eine grossartige Auswahl hast.</target>
+      </trans-unit>
+      
+      <trans-unit id="beverages_label">
+        <source>🍺 Beverages</source>
+        <target>🍺 Getränke</target>
+      </trans-unit>
+      
+      <trans-unit id="beverages_text">
+        <source>Enjoy beer taps with special craft beers, as well as soft drinks and water. Cheers! 🍻</source>
+        <target>Geniesse Bierhähne mit speziellen Craft-Bieren, sowie Softdrinks und Wasser. Prost! 🍻</target>
+      </trans-unit>
+      
+      <trans-unit id="contribute_ask">
+        <source>Want to contribute?</source>
+        <target>Möchtest du etwas beitragen?</target>
+      </trans-unit>
+      
+      <trans-unit id="contribute_text">
+        <source> In the registration form, let me know what food items you'd like to bring (salad, dessert, sides, etc.) or if you'll bring your own meat for the grill. I'll keep track of everything to make sure you have a balanced spread!</source>
+        <target> Lass mich im Registrierungsformular wissen, welche Lebensmittel du mitbringen möchtest (Salat, Dessert, Beilagen, etc.) oder ob du dein eigenes Fleisch für den Grill mitbringst. Ich führe über alles Buch, um sicherzustellen, dass du eine ausgewogene Auswahl hast!</target>
+      </trans-unit>
+      
+      <trans-unit id="rsvp_heading">
+        <source>🎯 Let's Know You're Coming!</source>
+        <target>🎯 Sag mir Bescheid, dass du kommst!</target>
+      </trans-unit>
+      
+      <trans-unit id="love_to_have">
+        <source>I'd love to have you there!</source>
+        <target>Ich würde mich freuen, dich dabei zu haben!</target>
+      </trans-unit>
+      
+      <trans-unit id="rsvp_text">
+        <source>If you haven't registered yet, please fill out the form below with your name, time preferences, and what you'd like to bring. It makes planning so much easier!</source>
+        <target>Falls du dich noch nicht angemeldet hast, füll bitte das folgende Formular mit deinem Namen, Zeitpräferenzen, etc. aus. Das macht die Planung viel leichter!</target>
+      </trans-unit>
+      
+      <trans-unit id="questions">
+        <source>Questions? </source>
+        <target>Fragen? </target>
+      </trans-unit>
+      
+      <trans-unit id="get_in_touch">
+        <source>Get in touch</source>
+        <target>Kontaktiere uns</target>
+      </trans-unit>
+      
+      <trans-unit id="happy_to_help">
+        <source> — I'm happy to help!</source>
+        <target> — ich helfe gerne!</target>
+      </trans-unit>
+      
+      <trans-unit id="thanks_closing">
+        <source>Thanks for celebrating this milestone with me!</source>
+        <target>Danke, dass du diesen Meilenstein mit mir feierst!</target>
+      </trans-unit>
+      
+      <trans-unit id="footer_talk">
+        <source>Questions? Let's talk! Reach out anytime.</source>
+        <target>Fragen? Lass uns reden! Kontaktiere uns jederzeit.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
