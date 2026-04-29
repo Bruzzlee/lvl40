@@ -7,8 +7,6 @@ let translations = {};
 
 // Initialize on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', async function() {
-    console.log('DOMContentLoaded fired');
-    
     // Immediately attach button handlers (don't wait for JSON)
     initLanguageSwitcher();
     
@@ -24,9 +22,8 @@ async function loadTranslations() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         translations = await response.json();
-        console.log('Translations loaded:', translations);
         
-        const currentLang = document.documentElement.getAttribute('data-lang') || 'en';
+        const currentLang = document.documentElement.getAttribute('data-lang') || 'de';
         translatePage(currentLang);
     } catch (error) {
         console.error('Failed to load translations:', error);
@@ -38,7 +35,7 @@ async function loadTranslations() {
  */
 function initLanguageSwitcher() {
     const langButtons = document.querySelectorAll('.lang-btn');
-    const currentLang = document.documentElement.getAttribute('data-lang') || 'en';
+    const currentLang = document.documentElement.getAttribute('data-lang') || 'de';
 
     // Set initial active button
     updateActiveButton(currentLang);
@@ -48,7 +45,6 @@ function initLanguageSwitcher() {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
             const selectedLang = this.getAttribute('data-lang');
-            console.log('Language button clicked:', selectedLang);
             switchLanguage(selectedLang);
         });
     });
@@ -58,8 +54,6 @@ function initLanguageSwitcher() {
  * Switch to selected language
  */
 function switchLanguage(lang) {
-    console.log('Switching to language:', lang);
-    
     // Save to localStorage
     localStorage.setItem('partyLang', lang);
     
@@ -91,21 +85,14 @@ function updateActiveButton(lang) {
  * Translate all elements on the page using data-i18n keys
  */
 function translatePage(lang) {
-    console.log('Translating page to:', lang);
-    console.log('Translations object available:', Object.keys(translations).length > 0);
-    
     // Get all elements with data-i18n attribute
     const translatableElements = document.querySelectorAll('[data-i18n]');
-    console.log('Found elements to translate:', translatableElements.length);
-    
-    let translatedCount = 0;
     
     translatableElements.forEach(element => {
         const key = element.getAttribute('data-i18n');
         
         // Check if translations object has the language
         if (!translations[lang]) {
-            console.warn(`Language "${lang}" not found in translations`);
             return;
         }
         
@@ -127,11 +114,6 @@ function translatePage(lang) {
                     element.textContent = text;
                 }
             }
-            translatedCount++;
-        } else {
-            console.warn(`Missing translation for key: "${key}" in language: "${lang}"`);
         }
     });
-    
-    console.log(`Translation complete: ${translatedCount}/${translatableElements.length} elements translated`);
 }
