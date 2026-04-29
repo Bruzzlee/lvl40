@@ -1,6 +1,8 @@
 /* ============================================
-   Level 40 Party - Modern, Clean Responsive CSS
+   Level 40 Party - Super Mario Theme
    ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /* ============================================
    1. Reset & Base Styles
@@ -14,6 +16,15 @@
 
 html {
     scroll-behavior: smooth;
+    image-rendering: pixelated;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.8;
+    color: #1a0a00;
+    background-color: #5c94fc;
+    overflow-x: hidden;
 }
 
 /* ============================================
@@ -22,54 +33,48 @@ html {
 
 .language-switcher {
     position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
-    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    z-index: 200;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    background: rgba(15, 15, 15, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 0.5rem 0.75rem;
-    border-radius: 8px;
-    border: 1px solid rgba(251, 191, 36, 0.3);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    gap: 0.4rem;
+    background: #e52521;
+    padding: 0.4rem 0.6rem;
+    border: 4px solid #000;
+    box-shadow: 4px 4px 0 #000;
 }
 
 .lang-btn {
-    background: transparent;
-    border: none;
-    color: #d1d5db;
-    font-weight: 600;
-    font-size: 0.9rem;
+    background: #ffd700;
+    border: 3px solid #000;
+    color: #000;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    font-size: 0.55rem;
     cursor: pointer;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    letter-spacing: 0.05em;
+    padding: 0.3rem 0.5rem;
+    transition: all 0.1s ease;
+    box-shadow: 2px 2px 0 #000;
 }
 
 .lang-btn:hover {
-    color: #fbbf24;
-    background: rgba(251, 191, 36, 0.1);
+    background: #fff;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 #000;
 }
 
 .lang-btn.active {
-    color: #fbbf24;
-    background: rgba(251, 191, 36, 0.2);
-    border-bottom: 2px solid #fbbf24;
+    background: #fff;
+    color: #e52521;
+    box-shadow: inset 2px 2px 0 #000;
+    transform: translate(2px, 2px);
 }
 
 .lang-separator {
-    color: #6b7280;
-    margin: 0 0.25rem;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
-    color: #e5e7eb;
-    background-color: #0f0f0f;
+    color: #ffd700;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
 }
 
 /* ============================================
@@ -77,88 +82,52 @@ body {
    ============================================ */
 
 h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
+    line-height: 1.4;
     margin-bottom: 1rem;
-    color: #fbbf24;
-    font-weight: 600;
+    color: #e52521;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 3px 3px 0 #000;
 }
 
 h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    text-shadow: 4px 4px 0 #000;
 }
 
 h2 {
-    font-size: 2.25rem;
+    font-size: clamp(1rem, 3vw, 1.6rem);
     margin-bottom: 1.5rem;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: clamp(0.7rem, 2vw, 1rem);
     margin-bottom: 0.75rem;
+}
+
+h4 {
+    font-size: 0.7rem;
 }
 
 p {
     margin-bottom: 1rem;
+    font-size: 0.65rem;
+    line-height: 2;
+    color: #1a0a00;
 }
 
 a {
-    color: #60a5fa;
-    text-decoration: none;
-    transition: color 0.2s ease;
+    color: #0000cd;
+    text-decoration: underline;
+    transition: color 0.1s ease;
 }
 
 a:hover {
-    color: #93c5fd;
-    text-decoration: underline;
+    color: #e52521;
 }
 
 /* ============================================
    3. Layout Containers
    ============================================ */
-
-/* Registration Banner */
-.registration-banner {
-    background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
-    color: #78350f;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
-    animation: gentle-pulse 3s ease-in-out infinite;
-}
-
-.registration-banner p {
-    margin-bottom: 0;
-    font-weight: 500;
-    font-size: 1rem;
-}
-
-.registration-banner a {
-    color: #78350f;
-    text-decoration: none;
-    border-bottom: 2px solid #78350f;
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.registration-banner a:hover {
-    color: #451a03;
-    border-bottom-color: #451a03;
-    text-decoration: none;
-}
-
-@keyframes gentle-pulse {
-    0%, 100% {
-        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
-    }
-    50% {
-        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
-    }
-}
 
 .container {
     max-width: 900px;
@@ -167,75 +136,280 @@ a:hover {
 }
 
 /* ============================================
+   Registration Banner
+   ============================================ */
+
+.registration-banner {
+    background: #e52521;
+    color: #ffd700;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 4px solid #000;
+    box-shadow: 0 4px 0 #000;
+    animation: banner-blink 2s step-end infinite;
+}
+
+@keyframes banner-blink {
+    0%, 100% { background: #e52521; }
+    50% { background: #c00; }
+}
+
+.registration-banner p {
+    margin-bottom: 0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 0 #000;
+    line-height: 2;
+}
+
+.registration-banner a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid #fff;
+}
+
+.registration-banner a:hover {
+    color: #ffd700;
+    border-bottom-color: #ffd700;
+}
+
+/* ============================================
+   Mario HUD Bar
+   ============================================ */
+
+.mario-hud {
+    background: #000;
+    color: #fff;
+    padding: 0.6rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.55rem;
+    border-bottom: 4px solid #e52521;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.hud-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.hud-label {
+    color: #fff;
+    font-size: 0.45rem;
+}
+
+.hud-value {
+    color: #ffd700;
+    font-size: 0.6rem;
+    text-shadow: 1px 1px 0 #a86800;
+}
+
+/* ============================================
    4. Hero Section
    ============================================ */
 
 .hero {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: #5c94fc;
     color: white;
-    padding: 8rem 1.5rem;
+    padding: 5rem 1.5rem 0;
     text-align: center;
-    min-height: 70vh;
+    min-height: 75vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: 3px solid #fbbf24;
     position: relative;
     overflow: hidden;
 }
 
-.hero::before {
-    content: '';
+/* Pixel clouds using box shadows */
+.clouds-layer {
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(96, 165, 250, 0.1) 0%, transparent 50%);
+    height: 80px;
     pointer-events: none;
+    overflow: hidden;
+}
+
+.cloud {
+    position: absolute;
+    background: #fff;
+    animation: cloud-move linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+}
+
+.cloud-1 {
+    width: 80px; height: 24px;
+    top: 20px; left: 10%;
+    animation-duration: 25s;
+    animation-delay: 0s;
+}
+.cloud-1::before { width: 48px; height: 24px; top: -20px; left: 12px; }
+.cloud-1::after  { width: 24px; height: 16px; top: -32px; left: 24px; }
+
+.cloud-2 {
+    width: 64px; height: 20px;
+    top: 10px; left: 50%;
+    animation-duration: 30s;
+    animation-delay: -10s;
+}
+.cloud-2::before { width: 40px; height: 20px; top: -16px; left: 10px; }
+.cloud-2::after  { width: 20px; height: 12px; top: -26px; left: 20px; }
+
+.cloud-3 {
+    width: 96px; height: 28px;
+    top: 24px; left: 75%;
+    animation-duration: 35s;
+    animation-delay: -5s;
+}
+.cloud-3::before { width: 56px; height: 28px; top: -22px; left: 16px; }
+.cloud-3::after  { width: 28px; height: 18px; top: -36px; left: 28px; }
+
+@keyframes cloud-move {
+    from { transform: translateX(0); }
+    to { transform: translateX(-120vw); }
+}
+
+/* Ground at bottom of hero */
+.hero-ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.hero-ground-top {
+    height: 16px;
+    background: #00a800;
+    border-top: 4px solid #00d800;
+    border-bottom: 4px solid #000;
+}
+
+.hero-ground-body {
+    height: 40px;
+    background: #56340a;
+    border-bottom: 4px solid #000;
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent 0px, transparent 63px,
+        rgba(0,0,0,0.15) 63px, rgba(0,0,0,0.15) 64px
+    ),
+    repeating-linear-gradient(
+        180deg,
+        transparent 0px, transparent 19px,
+        rgba(0,0,0,0.15) 19px, rgba(0,0,0,0.15) 20px
+    );
 }
 
 .hero-content {
     max-width: 800px;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 5rem;
+}
+
+.coin-block {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: #ffd700;
+    border: 4px solid #000;
+    box-shadow: inset -5px -5px 0 #a86800, inset 5px 5px 0 #ffe566, 4px 4px 0 #000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.4rem;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 0 #a86800;
+    margin-bottom: 1.5rem;
+    animation: block-bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes block-bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
 }
 
 .headline {
-    color: white;
+    color: #ffd700;
     margin-bottom: 1.5rem;
-    font-size: clamp(2.5rem, 8vw, 4rem);
+    text-shadow: 4px 4px 0 #000, 6px 6px 0 #a86800;
     animation: fadeInDown 0.8s ease;
 }
 
 .subheadline {
-    font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.95);
+    font-size: clamp(0.5rem, 1.5vw, 0.7rem);
+    color: #fff;
     margin-bottom: 0;
-    font-weight: 300;
-    line-height: 1.8;
+    font-weight: 400;
+    line-height: 2.8;
+    text-shadow: 2px 2px 0 #000;
     animation: fadeInUp 0.8s ease 0.2s both;
 }
 
 @keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pipes */
+.hero-pipes {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 1;
+    padding: 0 4%;
+}
+
+.pipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 64px;
+    flex-shrink: 0;
+}
+
+.pipe-cap {
+    width: 80px;
+    height: 20px;
+    background: #00c800;
+    border: 4px solid #000;
+    box-shadow: inset -4px -4px 0 #006000, inset 4px 0 0 #00ff00;
+}
+
+.pipe-body {
+    width: 64px;
+    height: 80px;
+    background: #00c800;
+    border: 4px solid #000;
+    border-top: none;
+    box-shadow: inset -4px 0 0 #006000;
 }
 
 /* ============================================
@@ -243,126 +417,153 @@ a:hover {
    ============================================ */
 
 .info {
-    padding: 6rem 1.5rem;
-    background-color: #1a1a1a;
+    padding: 5rem 1.5rem;
+    background: #f8e44c;
+    border-top: 8px solid #000;
+    position: relative;
+}
+
+.info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 16px;
+    background: repeating-linear-gradient(
+        90deg,
+        #c8500c 0px, #c8500c 31px,
+        #000 31px, #000 32px
+    );
 }
 
 .info h2 {
     text-align: center;
-    color: #111827;
+    color: #e52521;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
 }
 
 .details-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .detail-card {
-    background: linear-gradient(135deg, #1f1f3d 0%, #2a2a4a 100%);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 20px rgba(251, 191, 36, 0.1);
+    background: #ffd700;
+    padding: 1.5rem;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0 #000;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 3px solid #fbbf24;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    position: relative;
+}
+
+.detail-card::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    height: 4px;
+    background: rgba(255,255,255,0.6);
 }
 
 .detail-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(251, 191, 36, 0.2);
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 #000;
 }
 
 .detail-card h3 {
-    color: #fbbf24;
+    color: #e52521;
     margin-bottom: 0.75rem;
-    font-size: 1.3rem;
+    font-size: 0.75rem;
 }
 
 .detail-card p {
-    color: #d1d5db;
-    font-size: 1.1rem;
+    color: #1a0a00;
+    font-size: 0.6rem;
     margin-bottom: 0;
+    line-height: 2.2;
 }
+
+.detail-card a {
+    color: #0000cd;
+    font-weight: 400;
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.55rem;
+}
+
+.detail-card a:hover { color: #e52521; }
 
 .description {
     max-width: 700px;
     margin: 0 auto;
-    padding: 3rem 2rem;
-    background: linear-gradient(135deg, #1f1f3d 0%, #2a2a4a 100%);
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    border-top: 3px solid #fbbf24;
+    padding: 2rem;
+    background: #fff;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0 #000;
 }
 
 .description h3 {
-    color: #fbbf24;
+    color: #e52521;
     text-align: center;
 }
 
 .description p {
-    color: #d1d5db;
-    line-height: 1.8;
+    color: #1a0a00;
+    line-height: 2.2;
     text-align: center;
+    font-size: 0.6rem;
 }
 
 .how-to-reach {
     max-width: 700px;
-    margin: 3rem auto 0;
+    margin: 2.5rem auto 0;
     padding: 2rem;
-    background: linear-gradient(135deg, #1f1f3d 0%, #2a2a4a 100%);
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    border-top: 3px solid #fbbf24;
+    background: #fff;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0 #000;
 }
 
 .how-to-reach h3 {
-    color: #fbbf24;
+    color: #e52521;
     text-align: center;
 }
 
 .transport-options {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
     margin-top: 1.5rem;
 }
 
 .transport-card {
-    padding: 1.5rem;
-    background: rgba(251, 191, 36, 0.05);
-    border-radius: 8px;
-    border-left: 4px solid #fbbf24;
+    padding: 1.25rem;
+    background: #f8e44c;
+    border: 3px solid #000;
+    box-shadow: 3px 3px 0 #000;
 }
 
 .transport-card h4 {
-    color: #fbbf24;
+    color: #e52521;
     margin-bottom: 0.75rem;
-    font-size: 1.1rem;
+    font-size: 0.65rem;
 }
 
 .transport-card p {
-    color: #d1d5db;
-    font-size: 0.95rem;
+    color: #1a0a00;
+    font-size: 0.55rem;
     margin-bottom: 0;
-    line-height: 1.6;
+    line-height: 2;
 }
 
 .transport-card em {
-    color: #60a5fa;
-    font-style: italic;
-}
-
-.detail-card a {
-    color: #60a5fa;
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 0.5rem;
-}
-
-.detail-card a:hover {
+    color: #0000cd;
+    font-style: normal;
     text-decoration: underline;
 }
 
@@ -371,67 +572,96 @@ a:hover {
    ============================================ */
 
 .food-drinks {
-    padding: 6rem 1.5rem;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    border-top: 3px solid #fbbf24;
-    border-bottom: 3px solid #fbbf24;
+    padding: 5rem 1.5rem;
+    background: #5c94fc;
+    border-top: 8px solid #000;
+    border-bottom: 8px solid #000;
+    position: relative;
+}
+
+.food-drinks::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 16px;
+    background: repeating-linear-gradient(
+        90deg,
+        #00a800 0px, #00a800 31px,
+        #000 31px, #000 32px
+    );
 }
 
 .food-drinks h2 {
     text-align: center;
-    color: #fbbf24;
+    color: #ffd700;
+    text-shadow: 3px 3px 0 #000;
+    margin-bottom: 2.5rem;
+    padding-top: 1rem;
 }
 
 .food-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .food-card {
-    background: rgba(251, 191, 36, 0.05);
-    padding: 2.5rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(251, 191, 36, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(251, 191, 36, 0.2);
+    background: #ffd700;
+    padding: 2rem 1.5rem;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0 #000;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    position: relative;
+}
+
+.food-card::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    height: 4px;
+    background: rgba(255,255,255,0.5);
 }
 
 .food-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(251, 191, 36, 0.25), inset 0 0 20px rgba(251, 191, 36, 0.08);
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 #000;
 }
 
 .food-card h3 {
-    color: #fbbf24;
+    color: #e52521;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
 }
 
 .food-card p {
-    color: #d1d5db;
-    line-height: 1.7;
+    color: #1a0a00;
+    line-height: 2;
     margin-bottom: 0;
+    font-size: 0.6rem;
 }
 
-.food-card strong {
-    color: #fef3c7;
-}
+.food-card strong { color: #e52521; }
 
 .food-note {
     max-width: 700px;
     margin: 0 auto;
-    padding: 2rem;
-    background: rgba(96, 165, 250, 0.1);
-    border-radius: 12px;
-    border-left: 4px solid #60a5fa;
+    padding: 1.5rem;
+    background: #fff;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0 #000;
+    border-left: 8px solid #e52521;
 }
 
 .food-note p {
-    color: #d1d5db;
+    color: #1a0a00;
     margin-bottom: 0;
-    line-height: 1.8;
+    line-height: 2.2;
+    font-size: 0.6rem;
 }
 
 /* ============================================
@@ -439,48 +669,38 @@ a:hover {
    ============================================ */
 
 .rsvp {
-    padding: 6rem 1.5rem;
-    background: #1a1a1a;
+    padding: 5rem 1.5rem;
+    background: #f8e44c;
+    border-top: 8px solid #000;
 }
 
 .rsvp h2 {
     text-align: center;
-    color: #fbbf24;
+    color: #e52521;
 }
 
 .registration-highlight {
     max-width: 600px;
     margin: 2rem auto;
     padding: 1.5rem;
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
-    border-radius: 8px;
-    border-left: 4px solid #f59e0b;
+    background: #ffd700;
+    border: 4px solid #000;
+    box-shadow: 5px 5px 0 #000;
 }
 
 .registration-highlight p {
-    color: #d1d5db;
+    color: #1a0a00;
     margin-bottom: 0;
-    font-weight: 400;
-}
-
-.rsvp-intro {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #d1d5db;
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 0.6rem;
+    line-height: 2.2;
 }
 
 .form-wrapper {
-    margin: 3rem 0;
+    margin: 2.5rem 0;
     padding: 2rem;
-    background: linear-gradient(135deg, #1f1f3d 0%, #2a2a4a 100%);
-    border-radius: 12px;
-    border: 1px solid rgba(251, 191, 36, 0.2);
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0 #000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -489,306 +709,143 @@ a:hover {
 
 .form-button {
     display: inline-block;
-    padding: 1.25rem 3rem;
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-    color: #0f0f0f;
+    padding: 1.2rem 2.5rem;
+    background: #e52521;
+    color: #ffd700;
     text-decoration: none;
-    border-radius: 12px;
-    font-size: 1.25rem;
-    font-weight: 700;
-    border: 2px solid #fbbf24;
+    border: 4px solid #000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+    box-shadow: 6px 6px 0 #000;
     text-align: center;
-    letter-spacing: 0.5px;
+    transition: all 0.1s ease;
+    text-shadow: 2px 2px 0 #000;
+    animation: button-pulse 2s ease-in-out infinite;
+}
+
+@keyframes button-pulse {
+    0%, 100% { box-shadow: 6px 6px 0 #000; }
+    50% { box-shadow: 8px 8px 0 #000, 0 0 20px rgba(229,37,33,0.5); }
 }
 
 .form-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4);
-    background: linear-gradient(135deg, #fcd34d 0%, #fbbf24 100%);
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 #000;
+    background: #c00;
+    text-decoration: none;
+    color: #ffd700;
 }
 
 .form-button:active {
-    transform: translateY(0px);
-    box-shadow: 0 2px 10px rgba(251, 191, 36, 0.3);
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 #000;
 }
 
 .form-open-note {
-    font-size: 0.9rem;
-    color: #9ca3af;
+    font-size: 0.5rem;
+    color: #666;
     text-align: center;
-    font-style: italic;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 2;
 }
 
 .form-note {
     text-align: center;
-    color: #9ca3af;
-    font-size: 0.95rem;
-    margin-top: 2rem;
+    color: #666;
+    font-size: 0.5rem;
+    margin-top: 1.5rem;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 2;
 }
 
-.form-note a {
-    color: #60a5fa;
-    font-weight: 500;
-}
+.form-note a { color: #e52521; }
 
 /* ============================================
    7. Footer Section
    ============================================ */
 
 .footer {
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    background: #000;
     color: white;
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.5rem;
     text-align: center;
-    border-top: 3px solid #fbbf24;
+    border-top: 8px solid #e52521;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: repeating-linear-gradient(
+        90deg,
+        #c8500c 0px, #c8500c 31px,
+        #000 31px, #000 32px
+    );
 }
 
 .footer p {
     color: #d1d5db;
     margin-bottom: 1rem;
+    font-size: 0.55rem;
+    line-height: 2;
 }
 
 .footer strong {
-    color: #fbbf24;
-    font-weight: 600;
+    color: #ffd700;
+    text-shadow: 2px 2px 0 #a86800;
 }
 
 .footer-meta {
     color: #6b7280;
-    font-size: 0.95rem;
+    font-size: 0.45rem;
     margin-bottom: 0;
 }
 
 /* ============================================
-   8. Responsive Design (Mobile-First)
+   8. Responsive Design
    ============================================ */
 
-/* Tablet (768px and up) */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
+    h1 { font-size: 1.4rem; }
+    h2 { font-size: 1rem; }
+    h3 { font-size: 0.75rem; }
 
-    h2 {
-        font-size: 1.75rem;
-    }
-
-    .hero {
-        padding: 5rem 1.5rem;
-        min-height: 60vh;
-    }
-
-    .subheadline {
-        font-size: 1.2rem;
-    }
-
-    .info {
-        padding: 4rem 1.5rem;
-    }
-
-    .food-drinks {
-        padding: 4rem 1.5rem;
-    }
-
-    .food-grid {
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .details-grid {
-        gap: 1.5rem;
-        margin-bottom: 3rem;
-    }
-
-    .detail-card {
-        padding: 1.5rem;
-    }
-
-    .description {
-        padding: 2rem 1.5rem;
-    }
-
-    .rsvp {
-        padding: 4rem 1.5rem;
-    }
-
-    .form-wrapper {
-        padding: 1.5rem;
-        margin: 2rem 0;
-    }
-
-    .form-button {
-        padding: 1.15rem 2.5rem;
-        font-size: 1.15rem;
-    }
+    .hero { padding: 5rem 1rem 0; min-height: 65vh; }
+    .subheadline { font-size: 0.5rem; }
+    .info { padding: 4rem 1.5rem; }
+    .food-drinks { padding: 4rem 1.5rem; }
+    .food-grid { gap: 1.5rem; margin-bottom: 2rem; }
+    .details-grid { gap: 1.5rem; margin-bottom: 2.5rem; }
+    .detail-card { padding: 1.25rem; }
+    .description { padding: 1.5rem; }
+    .rsvp { padding: 4rem 1.5rem; }
+    .form-wrapper { padding: 1.25rem; margin: 1.5rem 0; }
+    .mario-hud { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .hero-pipes { display: none; }
 }
 
-/* Small phones (480px and down) */
 @media (max-width: 480px) {
-    .language-switcher {
-        top: 1rem;
-        right: 1rem;
-        padding: 0.4rem 0.6rem;
-    }
+    .language-switcher { top: 0.5rem; right: 0.5rem; }
+    .lang-btn { font-size: 0.5rem; padding: 0.2rem 0.35rem; }
+    h1 { font-size: 1.1rem; }
+    h2 { font-size: 0.85rem; margin-bottom: 1rem; }
+    h3 { font-size: 0.65rem; }
 
-    .lang-btn {
-        font-size: 0.8rem;
-        padding: 0.2rem 0.4rem;
-    }
-
-    html {
-        font-size: 14px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-
-    .hero {
-        padding: 3rem 1rem;
-        min-height: 55vh;
-    }
-
-    .headline {
-        margin-bottom: 1rem;
-    }
-
-    .subheadline {
-        font-size: 1rem;
-    }
-
-    .info {
-        padding: 2.5rem 1rem;
-    }
-
-    .food-drinks {
-        padding: 2.5rem 1rem;
-    }
-
-    .food-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .food-card {
-        padding: 1.5rem 1rem;
-    }
-
-    .food-note {
-        padding: 1.5rem 1rem;
-    }
-
-    .details-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .detail-card {
-        padding: 1.25rem;
-    }
-
-    .description {
-        padding: 1.5rem 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .how-to-reach {
-        padding: 1.5rem 1rem;
-        margin: 2rem auto 0;
-    }
-
-    .transport-options {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .rsvp {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .form-wrapper {
-        padding: 1rem;
-        margin: 1.5rem 0;
-    }
-
-    .form-button {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .form-open-note {
-        font-size: 0.85rem;
-    }
-
-    .footer {
-        padding: 3rem 1rem;
-    }
-
-    .footer p {
-        margin-bottom: 0.75rem;
-        font-size: 0.95rem;
-    }
-}
-
-/* ============================================
-   9. Print Styles
-   ============================================ */
-
-@media print {
-    .form-wrapper {
-        display: none;
-    }
-
-    .hero {
-        min-height: auto;
-        padding: 3rem 1.5rem;
-    }
-
-    .footer {
-        padding: 2rem 1.5rem;
-    }
-}
-
-/* ============================================
-   10. Accessibility & Utilities
-   ============================================ */
-
-/* Skip to main content link (for screen readers) */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #6366f1;
-    color: white;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 100;
-}
-
-.skip-link:focus {
-    top: 0;
-}
-
-/* Focus visible for keyboard navigation */
-a:focus-visible,
-button:focus-visible {
-    outline: 2px solid #6366f1;
-    outline-offset: 2px;
+    .hero { padding: 4rem 1rem 0; min-height: 55vh; }
+    .coin-block { width: 36px; height: 36px; font-size: 1rem; line-height: 28px; }
+    .info { padding: 3rem 1rem; }
+    .food-drinks { padding: 3rem 1rem; }
+    .food-grid { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+    .food-card { padding: 1.25rem 1rem; }
+    .food-note { padding: 1.25rem 1rem; }
+    .details-grid { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+    .detail-card { padding: 1.25rem 1rem; }
+    .rsvp { padding: 2.5rem 1rem; }
+    .form-button { padding: 1rem 1.5rem; font-size: 0.6rem; }
+    .mario-hud { font-size: 0.45rem; flex-direction: column; gap: 0.3rem; align-items: center; }
 }

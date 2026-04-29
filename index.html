@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Unlocking Level 40! Join me for a celebration of friendship, fun, and a new chapter.">
-    <meta name="theme-color" content="#fbbf24">
+    <meta name="theme-color" content="#e52521">
     
     <title>Unlocking Level 40</title>
     <link rel="stylesheet" href="style.css">
@@ -23,6 +23,26 @@
         <button class="lang-btn" data-lang="de" title="Deutsch">DE</button>
     </div>
 
+    <!-- Mario HUD Bar -->
+    <div class="mario-hud">
+        <div class="hud-item">
+            <span class="hud-label">MARIO</span>
+            <span class="hud-value">004000</span>
+        </div>
+        <div class="hud-item">
+            <span class="hud-label">&#x25CF; x 40</span>
+            <span class="hud-value" id="hud-coins">&#9733; x 0</span>
+        </div>
+        <div class="hud-item">
+            <span class="hud-label">WORLD</span>
+            <span class="hud-value">4 - 0</span>
+        </div>
+        <div class="hud-item">
+            <span class="hud-label">TIME</span>
+            <span class="hud-value" id="hud-timer">400</span>
+        </div>
+    </div>
+
     <!-- Registration Banner -->
     <div class="registration-banner">
         <p><span>✨ </span><strong><a href="#form-section" data-i18n="register_banner_link"></a></strong> <span data-i18n="register_banner_help"></span></p>
@@ -30,9 +50,35 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <!-- Pixel clouds -->
+        <div class="clouds-layer">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+
+        <!-- Decorative pipes -->
+        <div class="hero-pipes">
+            <div class="pipe">
+                <div class="pipe-cap"></div>
+                <div class="pipe-body"></div>
+            </div>
+            <div class="pipe">
+                <div class="pipe-cap"></div>
+                <div class="pipe-body"></div>
+            </div>
+        </div>
+
         <div class="hero-content">
+            <div class="coin-block">?</div>
             <h1 class="headline">Unlocking Level 40</h1>
             <p class="subheadline" data-i18n="hero_intro"></p>
+        </div>
+
+        <!-- Ground -->
+        <div class="hero-ground">
+            <div class="hero-ground-top"></div>
+            <div class="hero-ground-body"></div>
         </div>
     </section>
 

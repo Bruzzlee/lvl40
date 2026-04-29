@@ -12,7 +12,33 @@ document.addEventListener('DOMContentLoaded', async function() {
     
     // Load translations and apply immediately
     await loadTranslations();
+
+    // Mario HUD countdown timer
+    initMarioHUD();
 });
+
+/**
+ * Mario HUD: countdown to party date + coin star counter
+ */
+function initMarioHUD() {
+    const timerEl = document.getElementById('hud-timer');
+    const coinsEl = document.getElementById('hud-coins');
+    if (!timerEl || !coinsEl) return;
+
+    // Days until party
+    const partyDate = new Date('2026-08-15T00:00:00');
+    function updateTimer() {
+        const now = new Date();
+        const diff = Math.max(0, Math.ceil((partyDate - now) / 86400000));
+        timerEl.textContent = diff > 999 ? '999' : String(diff).padStart(3, '0');
+    }
+    updateTimer();
+    setInterval(updateTimer, 60000);
+
+    // Star count = how many guests registered (simulate via local coin counter)
+    let coins = parseInt(localStorage.getItem('marioCoins') || '0', 10);
+    coinsEl.textContent = '\u2605 x ' + coins;
+}
 
 // Load translations from JSON file
 async function loadTranslations() {
