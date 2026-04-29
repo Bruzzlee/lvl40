@@ -835,41 +835,98 @@ a:hover {
    ============================================ */
 
 @media (max-width: 768px) {
-    h1 { font-size: 1.4rem; }
-    h2 { font-size: 1rem; }
-    h3 { font-size: 0.75rem; }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1rem; }
 
     .hero { padding: 5rem 1rem 0; min-height: 65vh; }
-    .subheadline { font-size: 0.5rem; }
+    .subheadline { font-size: 0.65rem; }
     .info { padding: 4rem 1.5rem; }
     .food-drinks { padding: 4rem 1.5rem; }
     .food-grid { gap: 1.5rem; margin-bottom: 2rem; }
     .details-grid { gap: 1.5rem; margin-bottom: 2.5rem; }
     .detail-card { padding: 1.25rem; }
+    .detail-card h3 { font-size: 1rem; }
+    .detail-card p { font-size: 0.85rem; }
+    .detail-card a { font-size: 0.8rem; }
     .description { padding: 1.5rem; }
+    .description p { font-size: 0.75rem; }
+    .transport-card h4 { font-size: 0.75rem; }
+    .transport-card p { font-size: 0.75rem; }
+    .food-card h3 { font-size: 1rem; }
+    .food-card p { font-size: 0.75rem; }
+    .food-note p { font-size: 0.7rem; }
     .rsvp { padding: 4rem 1.5rem; }
     .form-wrapper { padding: 1.25rem; margin: 1.5rem 0; }
-    .mario-hud { flex-wrap: wrap; justify-content: center; gap: 1rem; }
-    .hero-pipes { display: none; }
+    .form-button { font-size: 0.65rem; padding: 1rem 1.5rem; }
+    .form-open-note { font-size: 0.55rem; }
+    .form-note { font-size: 0.55rem; }
+
+    /* HUD: 2×2 grid on tablet */
+    .mario-hud {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem 1.5rem;
+        padding: 0.6rem 1rem;
+    }
+    .hud-label { font-size: 0.5rem; }
+    .hud-value { font-size: 0.65rem; }
+
+    /* Scale pipes down to half size, keep them visible */
+    .hero-pipes { display: flex; padding: 0 2%; bottom: 56px; }
+    .pipe { width: 64px; }
+    .pipe-cap { width: 80px; height: 20px; }
+    .pipe-body { width: 64px; height: 80px; }
+    .oneup-mushroom { bottom: 2px; }
 }
 
 @media (max-width: 480px) {
     .language-switcher { top: 0.5rem; right: 0.5rem; }
     .lang-btn { font-size: 0.5rem; padding: 0.2rem 0.35rem; }
-    h1 { font-size: 1.1rem; }
-    h2 { font-size: 0.85rem; margin-bottom: 1rem; }
-    h3 { font-size: 0.65rem; }
+
+    h1 { font-size: 1.4rem; }
+    h2 { font-size: 1.1rem; margin-bottom: 1rem; }
+    h3 { font-size: 0.85rem; }
 
     .hero { padding: 4rem 1rem 0; min-height: 55vh; }
-    .coin-block { width: 36px; height: 36px; font-size: 1rem; line-height: 28px; }
+    .coin-block { width: 48px; height: 48px; font-size: 1.4rem; line-height: 40px; }
+    .subheadline { font-size: 0.6rem; }
     .info { padding: 3rem 1rem; }
     .food-drinks { padding: 3rem 1rem; }
     .food-grid { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem; }
     .food-card { padding: 1.25rem 1rem; }
+    .food-card h3 { font-size: 0.85rem; }
+    .food-card p { font-size: 0.7rem; }
     .food-note { padding: 1.25rem 1rem; }
+    .food-note p { font-size: 0.65rem; }
     .details-grid { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem; }
     .detail-card { padding: 1.25rem 1rem; }
+    .detail-card h3 { font-size: 0.9rem; }
+    .detail-card p { font-size: 0.75rem; }
+    .detail-card a { font-size: 0.7rem; }
+    .description p { font-size: 0.7rem; }
+    .transport-card h4 { font-size: 0.7rem; }
+    .transport-card p { font-size: 0.7rem; }
     .rsvp { padding: 2.5rem 1rem; }
+    .registration-highlight p { font-size: 0.65rem; }
     .form-button { padding: 1rem 1.5rem; font-size: 0.6rem; }
-    .mario-hud { font-size: 0.45rem; flex-direction: column; gap: 0.3rem; align-items: center; }
+    .form-open-note { font-size: 0.5rem; }
+    .form-note { font-size: 0.5rem; }
+
+    /* HUD: single column, compact */
+    .mario-hud {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.4rem 1rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.5rem;
+    }
+    .hud-label { font-size: 0.4rem; }
+    .hud-value { font-size: 0.55rem; }
+
+    /* Pipes: half size on small phones */
+    .hero-pipes { display: flex; padding: 0 1%; bottom: 56px; }
+    .pipe { width: 48px; }
+    .pipe-cap { width: 60px; height: 16px; }
+    .pipe-body { width: 48px; height: 60px; }
 }
