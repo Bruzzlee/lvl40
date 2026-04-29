@@ -138,5 +138,13 @@
   "footer_talk": {
     "en": "Questions? Let's talk! Reach out anytime.",
     "de": "Fragen? Lass uns reden! Kontaktiere uns jederzeit."
+  },
+  "form_button_text": {
+    "en": "📝 Fill Out RSVP Form",
+    "de": "📝 RSVP-Formular ausfüllen"
+  },
+  "form_open_note": {
+    "en": "Opens in a new window",
+    "de": "Öffnet sich in einem neuen Fenster"
   }
 }
