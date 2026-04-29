@@ -481,14 +481,45 @@ a:hover {
     border: 1px solid rgba(251, 191, 36, 0.2);
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-.form-wrapper iframe {
-    border: none;
-    border-radius: 8px;
-    display: block;
-    width: 100%;
-    filter: invert(0.95) hue-rotate(180deg);
+.form-button {
+    display: inline-block;
+    padding: 1.25rem 3rem;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #0f0f0f;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid #fbbf24;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.form-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4);
+    background: linear-gradient(135deg, #fcd34d 0%, #fbbf24 100%);
+}
+
+.form-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 10px rgba(251, 191, 36, 0.3);
+}
+
+.form-open-note {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    text-align: center;
+    font-style: italic;
 }
 
 .form-note {
@@ -589,8 +620,9 @@ a:hover {
         margin: 2rem 0;
     }
 
-    .form-wrapper iframe {
-        height: 800px !important;
+    .form-button {
+        padding: 1.15rem 2.5rem;
+        font-size: 1.15rem;
     }
 }
 
@@ -694,9 +726,15 @@ a:hover {
         margin: 1.5rem 0;
     }
 
-    .form-wrapper iframe {
-        height: 1000px !important;
-        min-height: 600px;
+    .form-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .form-open-note {
+        font-size: 0.85rem;
     }
 
     .footer {
