@@ -5,6 +5,15 @@
 
 let translations = {};
 
+// Initialize on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Immediately attach button handlers (don't wait for JSON)
+    initLanguageSwitcher();
+    
+    // Load translations asynchronously
+    loadTranslations();
+});
+
 // Load translations from JSON file
 async function loadTranslations() {
     try {
@@ -12,16 +21,13 @@ async function loadTranslations() {
         translations = await response.json();
         const currentLang = document.documentElement.getAttribute('data-lang') || 'en';
         translatePage(currentLang);
-        initLanguageSwitcher();
     } catch (error) {
         console.error('Failed to load translations:', error);
     }
 }
 
-document.addEventListener('DOMContentLoaded', loadTranslations);
-
 /**
- * Initialize language buttons
+ * Initialize language buttons with click handlers
  */
 function initLanguageSwitcher() {
     const langButtons = document.querySelectorAll('.lang-btn');
