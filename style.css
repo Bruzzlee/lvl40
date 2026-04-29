@@ -514,12 +514,12 @@ a:hover {
 .detail-card h3 {
     color: #e52521;
     margin-bottom: 0.75rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .detail-card p {
     color: #1a0a00;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 0;
     line-height: 2.2;
 }
@@ -529,7 +529,7 @@ a:hover {
     font-weight: 400;
     display: inline-block;
     margin-top: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
 }
 
 .detail-card a:hover { color: #e52521; }
@@ -552,7 +552,7 @@ a:hover {
     color: #1a0a00;
     line-height: 2.2;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 .how-to-reach {
@@ -586,12 +586,12 @@ a:hover {
 .transport-card h4 {
     color: #e52521;
     margin-bottom: 0.75rem;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
 }
 
 .transport-card p {
     color: #1a0a00;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     margin-bottom: 0;
     line-height: 2;
 }
