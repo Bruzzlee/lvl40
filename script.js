@@ -1,9 +1,29 @@
 /**
- * Language Switcher
- * Provides EN/DE language switching with localStorage persistence
+ * Language Switcher & Translation System
+ * Provides EN/DE language switching with JSON translations and localStorage persistence
  */
 
-document.addEventListener('DOMContentLoaded', function() {
+let translations = {};
+
+// Load translations from JSON file
+async function loadTranslations() {
+    try {
+        const response = await fetch('translations.json');
+        translations = await response.json();
+        const currentLang = document.documentElement.getAttribute('data-lang') || 'en';
+        translatePage(currentLang);
+        initLanguageSwitcher();
+    } catch (error) {
+        console.error('Failed to load translations:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadTranslations);
+
+/**
+ * Initialize language buttons
+ */
+function initLanguageSwitcher() {
     const langButtons = document.querySelectorAll('.lang-btn');
     const currentLang = document.documentElement.getAttribute('data-lang') || 'en';
 
@@ -17,59 +37,67 @@ document.addEventListener('DOMContentLoaded', function() {
             switchLanguage(selectedLang);
         });
     });
+}
 
-    /**
-     * Switch to selected language
-     */
-    function switchLanguage(lang) {
-        // Save to localStorage
-        localStorage.setItem('partyLang', lang);
-        
-        // Update document language
-        document.documentElement.lang = lang;
-        document.documentElement.setAttribute('data-lang', lang);
-        
-        // Update active button
-        updateActiveButton(lang);
-        
-        // Apply translations
-        translatePage(lang);
-    }
+/**
+ * Switch to selected language
+ */
+function switchLanguage(lang) {
+    // Save to localStorage
+    localStorage.setItem('partyLang', lang);
+    
+    // Update document language
+    document.documentElement.lang = lang;
+    document.documentElement.setAttribute('data-lang', lang);
+    
+    // Update active button
+    const langButtons = document.querySelectorAll('.lang-btn');
+    updateActiveButton(lang);
+    
+    // Apply translations
+    translatePage(lang);
+}
 
-    /**
-     * Update which language button is active
-     */
-    function updateActiveButton(lang) {
-        langButtons.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.getAttribute('data-lang') === lang) {
-                btn.classList.add('active');
-            }
-        });
-    }
+/**
+ * Update which language button is active
+ */
+function updateActiveButton(lang) {
+    const langButtons = document.querySelectorAll('.lang-btn');
+    langButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        }
+    });
+}
 
-    /**
-     * Translate all elements on the page
-     */
-    function translatePage(lang) {
-        // Get all elements with data-en or data-de attributes
-        const translatableElements = document.querySelectorAll('[data-en][data-de]');
+/**
+ * Translate all elements on the page using data-i18n keys
+ */
+function translatePage(lang) {
+    // Get all elements with data-i18n attribute
+    const translatableElements = document.querySelectorAll('[data-i18n]');
+    
+    translatableElements.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const text = translations[lang]?.[key];
         
-        translatableElements.forEach(element => {
-            const text = element.getAttribute(`data-${lang}`);
-            if (text) {
-                // For elements with only text content
-                if (element.children.length === 0) {
-                    element.textContent = text;
+        if (text) {
+            // For elements with only text content
+            if (element.children.length === 0) {
+                element.textContent = text;
+            } else {
+                // For elements with mixed content (text + child elements)
+                // Only update first text node
+                const firstTextNode = Array.from(element.childNodes).find(
+                    node => node.nodeType === Node.TEXT_NODE
+                );
+                if (firstTextNode) {
+                    firstTextNode.textContent = text;
                 } else {
-                    // For elements with mixed content (text + child elements)
-                    // We need to be careful not to replace child elements
-                    element.innerHTML = text;
+                    element.textContent = text;
                 }
             }
-        });
-    }
-
-    // Initial translation on page load
-    translatePage(currentLang);
-});
+        }
+    });
+}
