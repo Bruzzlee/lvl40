@@ -6,7 +6,7 @@
     <meta name="description" content="Unlocking Level 40! Join me for a celebration of friendship, fun, and a new chapter.">
     <meta name="theme-color" content="#e52521">
     
-    <title>Unlocking Level 40</title>
+    <title data-i18n="page_title">Level-UP 40!</title>
     <link rel="stylesheet" href="style.css">
     <script>
         // Set language from localStorage or default to German
@@ -57,13 +57,65 @@
             <div class="cloud cloud-3"></div>
         </div>
 
-        <!-- Decorative pipes -->
+        <!-- Decorative pipes + 1UP mushroom walker -->
         <div class="hero-pipes">
-            <div class="pipe">
+            <div class="pipe pipe-left">
                 <div class="pipe-cap"></div>
                 <div class="pipe-body"></div>
             </div>
-            <div class="pipe">
+
+            <!-- Animated 1UP mushroom -->
+            <div class="oneup-mushroom" aria-label="1-UP mushroom" role="img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 36" width="52" height="58" style="image-rendering:pixelated" aria-hidden="true">
+                  <!-- Black outline cap -->
+                  <rect x="10" y="0" width="12" height="2" fill="#000"/>
+                  <rect x="6" y="2" width="20" height="2" fill="#000"/>
+                  <rect x="4" y="4" width="24" height="2" fill="#000"/>
+                  <rect x="2" y="6" width="28" height="2" fill="#000"/>
+                  <rect x="2" y="8" width="28" height="2" fill="#000"/>
+                  <rect x="2" y="10" width="28" height="2" fill="#000"/>
+                  <rect x="2" y="12" width="28" height="2" fill="#000"/>
+                  <rect x="4" y="14" width="24" height="2" fill="#000"/>
+                  <!-- Green cap fill -->
+                  <rect x="10" y="1" width="12" height="1" fill="#00a800"/>
+                  <rect x="6" y="3" width="20" height="1" fill="#00a800"/>
+                  <rect x="4" y="5" width="24" height="1" fill="#00a800"/>
+                  <rect x="2" y="7" width="28" height="1" fill="#00a800"/>
+                  <rect x="2" y="9" width="28" height="1" fill="#00a800"/>
+                  <rect x="2" y="11" width="28" height="1" fill="#00a800"/>
+                  <rect x="2" y="13" width="28" height="1" fill="#00a800"/>
+                  <rect x="4" y="15" width="24" height="1" fill="#00a800"/>
+                  <!-- White spots -->
+                  <rect x="6" y="4" width="6" height="6" fill="#fff"/>
+                  <rect x="20" y="4" width="6" height="6" fill="#fff"/>
+                  <rect x="13" y="10" width="6" height="4" fill="#fff"/>
+                  <!-- Face outline -->
+                  <rect x="4" y="16" width="24" height="10" fill="#000"/>
+                  <!-- Face fill (peach) -->
+                  <rect x="6" y="16" width="20" height="10" fill="#ffd8a0"/>
+                  <!-- Eyes -->
+                  <rect x="9" y="18" width="4" height="4" fill="#000"/>
+                  <rect x="19" y="18" width="4" height="4" fill="#000"/>
+                  <!-- White eye shine -->
+                  <rect x="10" y="19" width="2" height="2" fill="#fff"/>
+                  <rect x="20" y="19" width="2" height="2" fill="#fff"/>
+                  <!-- Smile -->
+                  <rect x="11" y="23" width="2" height="2" fill="#000"/>
+                  <rect x="19" y="23" width="2" height="2" fill="#000"/>
+                  <rect x="13" y="24" width="6" height="2" fill="#000"/>
+                  <!-- Stem outline -->
+                  <rect x="10" y="26" width="12" height="2" fill="#000"/>
+                  <rect x="8" y="28" width="16" height="4" fill="#000"/>
+                  <rect x="10" y="32" width="12" height="2" fill="#000"/>
+                  <!-- Stem fill -->
+                  <rect x="10" y="27" width="12" height="5" fill="#ffd8a0"/>
+                  <!-- 1UP label band -->
+                  <rect x="6" y="28" width="20" height="2" fill="#ffd700"/>
+                </svg>
+                <div class="oneup-label">1UP</div>
+            </div>
+
+            <div class="pipe pipe-right">
                 <div class="pipe-cap"></div>
                 <div class="pipe-body"></div>
             </div>
@@ -71,7 +123,51 @@
 
         <div class="hero-content">
             <div class="coin-block">?</div>
-            <h1 class="headline">Unlocking Level 40</h1>
+            <h1 class="headline" data-i18n="headline">
+                <svg class="mushroom-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 36" width="52" height="58" aria-hidden="true" style="image-rendering:pixelated;vertical-align:middle;margin-right:0.4em">
+                  <!-- Red cap -->
+                  <rect x="10" y="0" width="12" height="2" fill="#000"/>
+                  <rect x="6" y="2" width="20" height="2" fill="#000"/>
+                  <rect x="4" y="4" width="24" height="2" fill="#000"/>
+                  <rect x="2" y="6" width="28" height="2" fill="#000"/>
+                  <rect x="2" y="8" width="28" height="2" fill="#000"/>
+                  <rect x="2" y="10" width="28" height="2" fill="#000"/>
+                  <rect x="2" y="12" width="28" height="2" fill="#000"/>
+                  <rect x="4" y="14" width="24" height="2" fill="#000"/>
+                  <!-- Red fill -->
+                  <rect x="10" y="1" width="12" height="1" fill="#e52521"/>
+                  <rect x="6" y="2" width="20" height="2" fill="#e52521"/>
+                  <rect x="4" y="4" width="24" height="2" fill="#e52521"/>
+                  <rect x="2" y="6" width="28" height="2" fill="#e52521"/>
+                  <rect x="2" y="8" width="28" height="2" fill="#e52521"/>
+                  <rect x="2" y="10" width="28" height="2" fill="#e52521"/>
+                  <rect x="2" y="12" width="28" height="2" fill="#e52521"/>
+                  <rect x="4" y="14" width="24" height="2" fill="#e52521"/>
+                  <!-- White spots -->
+                  <rect x="6" y="4" width="6" height="6" fill="#fff"/>
+                  <rect x="20" y="4" width="6" height="6" fill="#fff"/>
+                  <rect x="13" y="10" width="6" height="4" fill="#fff"/>
+                  <!-- Face area (peach) -->
+                  <rect x="4" y="16" width="24" height="10" fill="#000"/>
+                  <rect x="6" y="16" width="20" height="10" fill="#ffd8a0"/>
+                  <rect x="4" y="16" width="2" height="10" fill="#000"/>
+                  <rect x="26" y="16" width="2" height="10" fill="#000"/>
+                  <!-- Eyes -->
+                  <rect x="9" y="18" width="4" height="4" fill="#000"/>
+                  <rect x="19" y="18" width="4" height="4" fill="#000"/>
+                  <!-- White eye shine -->
+                  <rect x="10" y="19" width="2" height="2" fill="#fff"/>
+                  <rect x="20" y="19" width="2" height="2" fill="#fff"/>
+                  <!-- Stem -->
+                  <rect x="10" y="26" width="12" height="2" fill="#000"/>
+                  <rect x="8" y="28" width="16" height="2" fill="#000"/>
+                  <rect x="8" y="30" width="16" height="2" fill="#000"/>
+                  <rect x="10" y="32" width="12" height="2" fill="#000"/>
+                  <rect x="10" y="27" width="12" height="1" fill="#ffd8a0"/>
+                  <rect x="10" y="28" width="12" height="4" fill="#ffd8a0"/>
+                  <rect x="10" y="32" width="12" height="1" fill="#ffd8a0"/>
+                </svg>Level-UP 40!
+            </h1>
             <p class="subheadline" data-i18n="hero_intro"></p>
         </div>
 

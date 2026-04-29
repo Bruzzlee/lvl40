@@ -111,6 +111,11 @@ function updateActiveButton(lang) {
  * Translate all elements on the page using data-i18n keys
  */
 function translatePage(lang) {
+    // Update <title> element via page_title key
+    if (translations['page_title'] && translations['page_title'][lang]) {
+        document.title = translations['page_title'][lang];
+    }
+
     // Get all elements with data-i18n attribute
     const translatableElements = document.querySelectorAll('[data-i18n]');
     
@@ -130,14 +135,12 @@ function translatePage(lang) {
                 element.textContent = text;
             } else {
                 // For elements with mixed content (text + child elements)
-                // Only update first text node
-                const firstTextNode = Array.from(element.childNodes).find(
-                    node => node.nodeType === Node.TEXT_NODE
+                // Find the last text node (after any SVG/child elements)
+                const textNodes = Array.from(element.childNodes).filter(
+                    node => node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== ''
                 );
-                if (firstTextNode) {
-                    firstTextNode.textContent = text;
-                } else {
-                    element.textContent = text;
+                if (textNodes.length > 0) {
+                    textNodes[textNodes.length - 1].textContent = text;
                 }
             }
         }
