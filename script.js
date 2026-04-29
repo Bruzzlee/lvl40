@@ -91,12 +91,12 @@ function translatePage(lang) {
     translatableElements.forEach(element => {
         const key = element.getAttribute('data-i18n');
         
-        // Check if translations object has the language
-        if (!translations[lang]) {
+        // Check if key exists in translations
+        if (!translations[key]) {
             return;
         }
         
-        const text = translations[lang][key];
+        const text = translations[key][lang];
         
         if (text) {
             // For elements with only text content
