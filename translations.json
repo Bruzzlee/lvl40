@@ -125,7 +125,7 @@
   },
   "get_in_touch": {
     "en": "Get in touch",
-    "de": "Kontaktiere uns"
+    "de": "Kontaktiere mich"
   },
   "happy_to_help": {
     "en": " — I'm happy to help!",
@@ -134,9 +134,6 @@
   "thanks_closing": {
     "en": "Thanks for celebrating this milestone with me!",
     "de": "Danke, dass du diesen Meilenstein mit mir feierst!"
-  },
-  "footer_talk": {
-    "en": "Questions? Let's talk! Reach out anytime."
   },
   "form_button_text": {
     "en": "📝 Fill Out RSVP Form",
