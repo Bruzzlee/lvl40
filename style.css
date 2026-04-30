@@ -415,9 +415,10 @@ a:hover {
     gap: 4px;
     flex: 1;
     animation: mushroom-walk 16.7s linear infinite;
-    pointer-events: none;
+    pointer-events: auto;
     position: relative;
     bottom: 4px;
+    cursor: pointer;
 }
 
 .oneup-mushroom img {

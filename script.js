@@ -47,7 +47,6 @@ function initSoundEffects() {
     // Mushroom: play 1up + jump animation on click
     const mushroom = document.querySelector('.oneup-mushroom');
     if (mushroom) {
-        mushroom.style.cursor = 'pointer';
         mushroom.addEventListener('click', function() {
             sound1up.currentTime = 0;
             sound1up.play();
