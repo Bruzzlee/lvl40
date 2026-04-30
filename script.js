@@ -22,8 +22,7 @@ document.addEventListener('DOMContentLoaded', async function() {
  */
 function initMarioHUD() {
     const timerEl = document.getElementById('hud-timer');
-    const coinsEl = document.getElementById('hud-coins');
-    if (!timerEl || !coinsEl) return;
+    if (!timerEl) return;
 
     // Days until party
     const partyDate = new Date('2026-08-15T00:00:00');
@@ -35,9 +34,7 @@ function initMarioHUD() {
     updateTimer();
     setInterval(updateTimer, 60000);
 
-    // Star count = how many guests registered (simulate via local coin counter)
-    let coins = parseInt(localStorage.getItem('marioCoins') || '0', 10);
-    coinsEl.textContent = String(coins);
+    // Coin count is fixed at 40 (birthday level)
 }
 
 // Load translations from JSON file

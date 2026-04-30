@@ -201,15 +201,10 @@ a:hover {
     gap: 0.3rem;
 }
 
-.hud-label {
+.hud-label,
+.hud-value {
     color: #fff;
     font-size: 1.1rem;
-}
-
-.hud-value {
-    color: #ffd700;
-    font-size: 1.4rem;
-    text-shadow: 1px 1px 0 #a86800;
 }
 
 /* ============================================
@@ -881,8 +876,7 @@ a:hover {
         gap: 0.25rem 0.5rem;
         padding: 0.5rem 0.5rem;
     }
-    .hud-label { font-size: 0.4rem; }
-    .hud-value { font-size: 0.5rem; }
+    .hud-label, .hud-value { font-size: 0.8rem; color: #fff; }
 
     /* Mobile: pipes flow below text, sit just above ground */
     .hero-pipes { position: relative; bottom: auto; margin-top: auto; margin-bottom: 56px; padding: 0 2%; width: 100%; }
@@ -936,8 +930,7 @@ a:hover {
         padding: 0.4rem 0.25rem;
         font-size: 0.4rem;
     }
-    .hud-label { font-size: 0.35rem; }
-    .hud-value { font-size: 0.45rem; }
+    .hud-label, .hud-value { font-size: 0.7rem; color: #fff; }
 
     /* Pipes: half size on small phones, flow below text */
     .hero-pipes { position: relative; bottom: auto; margin-top: auto; margin-bottom: 56px; padding: 0 1%; width: 100%; }
