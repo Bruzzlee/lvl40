@@ -432,6 +432,12 @@ a:hover {
     height: 18px;
 }
 
+.hud-heart {
+    font-size: 1.6rem;
+    vertical-align: baseline;
+    line-height: 1;
+}
+
 @keyframes mushroom-walk {
     0%   { transform: translateX(-40%); }
     50%  { transform: translateX(40%); }
@@ -896,8 +902,8 @@ a:hover {
         padding: 0.5rem 0.5rem;
     }
     .hud-label, .hud-value { font-size: 0.8rem; color: #fff; }
-    .hud-coin-img { vertical-align: middle; width: 14px; height: 14px; }
-    .hero-pipes { position: relative; bottom: auto; margin-top: auto; margin-bottom: 56px; padding: 0 2%; width: 100%; }
+    .hud-coin-img { vertical-align: top; width: 18px; height: 18px; }
+    .hud-heart { font-size: 1.4rem; position: relative; top: 1px; } { position: relative; bottom: auto; margin-top: auto; margin-bottom: 56px; padding: 0 2%; width: 100%; }
     .pipe { width: 64px; }
     .pipe-cap { width: 80px; height: 20px; }
     .pipe-body { width: 64px; height: 80px; }
@@ -949,8 +955,8 @@ a:hover {
         font-size: 0.4rem;
     }
     .hud-label, .hud-value { font-size: 0.7rem; color: #fff; }
-    .hud-coin-img { vertical-align: middle; width: 12px; height: 12px; }
-    .hero-pipes { position: relative; bottom: auto; margin-top: auto; margin-bottom: 56px; padding: 0 1%; width: 100%; }
+    .hud-coin-img { vertical-align: top; width: 18px; height: 18px; }
+    .hud-heart { font-size: 1.2rem; position: relative; top: 1px; } { position: relative; bottom: auto; margin-top: auto; margin-bottom: 56px; padding: 0 1%; width: 100%; }
     .pipe { width: 48px; }
     .pipe-cap { width: 60px; height: 16px; }
     .pipe-body { width: 48px; height: 60px; }
