@@ -350,10 +350,10 @@ a:hover {
 }
 
 @keyframes piranha-grow {
-    0%   { transform: translateY(100%) scaleY(0); opacity: 0; }
-    30%  { transform: translateY(0%) scaleY(1);   opacity: 1; }
-    70%  { transform: translateY(0%) scaleY(1);   opacity: 1; }
-    100% { transform: translateY(100%) scaleY(0); opacity: 0; }
+    0%   { transform: translateX(-50%) translateY(100%) scaleY(0); opacity: 0; }
+    30%  { transform: translateX(-50%) translateY(0%) scaleY(1);   opacity: 1; }
+    70%  { transform: translateX(-50%) translateY(0%) scaleY(1);   opacity: 1; }
+    100% { transform: translateX(-50%) translateY(100%) scaleY(0); opacity: 0; }
 }
 
 .piranha-popup {
@@ -949,6 +949,7 @@ a:hover {
     .pipe-cap { width: 80px; height: 20px; }
     .pipe-body { width: 64px; height: 80px; }
     .oneup-mushroom { bottom: 2px; }
+    .piranha-popup { width: 40px; }
 }
 
 @media (max-width: 480px) {
