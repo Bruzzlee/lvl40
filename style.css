@@ -427,6 +427,7 @@ a:hover {
     flex-shrink: 0;
     position: relative;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 .pipe-cap {
