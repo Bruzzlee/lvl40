@@ -41,8 +41,9 @@ function initMarioHUD() {
 }
 
 function initSoundEffects() {
-    const sound1up  = new Audio('assets/sounds/1up.mp3');
-    const soundCoin = new Audio('assets/sounds/coin.mp3');
+    const sound1up    = new Audio('assets/sounds/1up.mp3');
+    const soundCoin   = new Audio('assets/sounds/coin.mp3');
+    const soundRustle = new Audio('assets/sounds/rustle.mp3');
 
     // Mushroom: play 1up + jump animation + increment lives on click
     const mushroom = document.querySelector('.oneup-mushroom');
@@ -99,6 +100,8 @@ function initSoundEffects() {
     document.querySelectorAll('.pipe').forEach(pipe => {
         pipe.addEventListener('click', function() {
             if (pipe.querySelector('.piranha-popup')) return; // already animating
+            soundRustle.currentTime = 0;
+            soundRustle.play();
             const plant = document.createElement('img');
             plant.src = 'assets/images/piranha_plant.svg';
             plant.className = 'piranha-popup';
