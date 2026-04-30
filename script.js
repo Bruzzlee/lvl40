@@ -85,13 +85,10 @@ function initSoundEffects() {
                 if (coinsEl) coinsEl.textContent = coinCount;
             }
             // Spawn coin graphic above the block
-            const rect = coinBlock.getBoundingClientRect();
             const coinImg = document.createElement('img');
             coinImg.src = 'assets/images/coin.svg';
             coinImg.className = 'coin-popup';
-            coinImg.style.left = (rect.left + rect.width / 2 - 16) + 'px';
-            coinImg.style.top  = (rect.top + window.scrollY - 32) + 'px';
-            document.body.appendChild(coinImg);
+            coinBlock.appendChild(coinImg);
             coinImg.addEventListener('animationend', () => coinImg.remove());
         });
     }

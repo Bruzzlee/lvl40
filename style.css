@@ -322,6 +322,7 @@ a:hover {
 
 .coin-block {
     display: inline-block;
+    position: relative;
     width: 96px;
     height: 96px;
     background: #ffd700;
@@ -370,7 +371,10 @@ a:hover {
 }
 
 .coin-popup {
-    position: fixed;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 32px;
     height: 32px;
     pointer-events: none;
