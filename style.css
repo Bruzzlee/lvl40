@@ -377,7 +377,7 @@ a:hover {
 /* Pipes */
 .hero-pipes {
     position: absolute;
-    bottom: 120px;
+    bottom: 56px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -502,12 +502,12 @@ a:hover {
 .detail-card h3 {
     color: #e52521;
     margin-bottom: 0.75rem;
-    font-size: 1.2rem;
+    font-size: clamp(0.8rem, 2.2vw, 1.2rem);
 }
 
 .detail-card p {
     color: #1a0a00;
-    font-size: 1.1rem;
+    font-size: 0.75rem;
     margin-bottom: 0;
     line-height: 2.2;
 }
@@ -517,7 +517,7 @@ a:hover {
     font-weight: 400;
     display: inline-block;
     margin-top: 0.5rem;
-    font-size: 1.0rem;
+    font-size: clamp(0.7rem, 2.2vw, 1rem);
 }
 
 .detail-card a:hover { color: #e52521; }
@@ -527,7 +527,7 @@ a:hover {
     font-weight: 400;
     display: inline-block;
     margin-top: 0.5rem;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 2.2vw, 1rem);
 }
 
 .transport-card a:hover { color: #e52521; }
@@ -550,7 +550,7 @@ a:hover {
     color: #1a0a00;
     line-height: 2.2;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 2.2vw, 1rem);
 }
 
 .how-to-reach {
@@ -589,7 +589,7 @@ a:hover {
 
 .transport-card p {
     color: #1a0a00;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 2.2vw, 1rem);
     margin-bottom: 0;
     line-height: 2;
 }
@@ -668,14 +668,14 @@ a:hover {
 .food-card h3 {
     color: #e52521;
     margin-bottom: 1rem;
-    font-size: 0.8rem;
+    font-size: clamp(0.8rem, 2.2vw, 1.2rem);
 }
 
 .food-card p {
     color: #1a0a00;
     line-height: 2;
     margin-bottom: 0;
-    font-size: 0.6rem;
+    font-size: clamp(0.7rem, 2.2vw, 1rem);
 }
 
 .food-card strong { color: #e52521; }
@@ -694,7 +694,7 @@ a:hover {
     color: #1a0a00;
     margin-bottom: 0;
     line-height: 2.2;
-    font-size: 0.6rem;
+    font-size: clamp(0.7rem, 2.2vw, 1rem);
 }
 
 /* ============================================
@@ -724,7 +724,7 @@ a:hover {
 .registration-highlight p {
     color: #1a0a00;
     margin-bottom: 0;
-    font-size: 0.6rem;
+    font-size: clamp(0.7rem, 2.2vw, 1rem);
     line-height: 2.2;
 }
 
@@ -857,16 +857,16 @@ a:hover {
     .details-grid { gap: 1.5rem; margin-bottom: 2.5rem; }
     .detail-card { padding: 1.25rem; }
     .detail-card h3 { font-size: 1rem; }
-    .detail-card p { font-size: 0.85rem; }
-    .detail-card a { font-size: 0.8rem; }
+    .detail-card p { font-size: 0.65rem; }
+    .detail-card a { font-size: 0.65rem; }
     .description { padding: 1.5rem; }
     .description p { font-size: 0.75rem; }
     .transport-card h4 { font-size: 0.75rem; }
     .transport-card p { font-size: 0.75rem; }
     .transport-card a { font-size: 0.75rem; }
     .food-card h3 { font-size: 1rem; }
-    .food-card p { font-size: 0.75rem; }
-    .food-note p { font-size: 0.7rem; }
+    .food-card p { font-size: 0.65rem; }
+    .food-note p { font-size: 0.65rem; }
     .rsvp { padding: 4rem 1.5rem; }
     .form-wrapper { padding: 1.25rem; margin: 1.5rem 0; }
     .form-button { font-size: 0.65rem; padding: 1rem 1.5rem; }
@@ -908,21 +908,21 @@ a:hover {
     .food-drinks { padding: 3rem 1rem; }
     .food-grid { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem; }
     .food-card { padding: 1.25rem 1rem; }
-    .food-card h3 { font-size: 0.85rem; }
-    .food-card p { font-size: 0.7rem; }
+    .food-card h3 { font-size: 0.9rem; }
+    .food-card p { font-size: 0.6rem; }
     .food-note { padding: 1.25rem 1rem; }
-    .food-note p { font-size: 0.65rem; }
+    .food-note p { font-size: 0.6rem; }
     .details-grid { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem; }
     .detail-card { padding: 1.25rem 1rem; }
     .detail-card h3 { font-size: 0.9rem; }
-    .detail-card p { font-size: 0.75rem; }
-    .detail-card a { font-size: 0.7rem; }
-    .description p { font-size: 0.7rem; }
+    .detail-card p { font-size: 0.6rem; }
+    .detail-card a { font-size: 0.6rem; }
+    .description p { font-size: 0.6rem; }
     .transport-card h4 { font-size: 0.7rem; }
-    .transport-card p { font-size: 0.7rem; }
-    .transport-card a { font-size: 0.7rem; }
+    .transport-card p { font-size: 0.6rem; }
+    .transport-card a { font-size: 0.6rem; }
     .rsvp { padding: 2.5rem 1rem; }
-    .registration-highlight p { font-size: 0.65rem; }
+    .registration-highlight p { font-size: 0.6rem; }
     .form-button { padding: 1rem 1.5rem; font-size: 0.6rem; }
     .form-open-note { font-size: 0.5rem; }
     .form-note { font-size: 0.5rem; }
