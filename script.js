@@ -61,13 +61,21 @@ function initSoundEffects() {
         });
     }
 
-    // Coin block: play coin sound on click
+    // Coin block: play coin sound + increment counter on click
     const coinBlock = document.querySelector('.coin-block');
+    const coinsEl = document.getElementById('hud-coins');
+    let coinCount = parseInt(localStorage.getItem('marioCoins') || '40', 10);
+    if (coinsEl) coinsEl.textContent = coinCount;
     if (coinBlock) {
         coinBlock.style.cursor = 'pointer';
         coinBlock.addEventListener('click', function() {
             soundCoin.currentTime = 0;
             soundCoin.play();
+            if (coinCount < 99) {
+                coinCount++;
+                localStorage.setItem('marioCoins', coinCount);
+                if (coinsEl) coinsEl.textContent = coinCount;
+            }
         });
     }
 }
