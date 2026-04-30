@@ -425,6 +425,13 @@ a:hover {
     filter: drop-shadow(2px 4px 0 rgba(0,0,0,0.5));
 }
 
+.hud-coin-img {
+    image-rendering: pixelated;
+    vertical-align: text-top;
+    width: 18px;
+    height: 18px;
+}
+
 @keyframes mushroom-walk {
     0%   { transform: translateX(-40%); }
     50%  { transform: translateX(40%); }
@@ -889,8 +896,7 @@ a:hover {
         padding: 0.5rem 0.5rem;
     }
     .hud-label, .hud-value { font-size: 0.8rem; color: #fff; }
-
-    /* Mobile: pipes flow below text, sit just above ground */
+    .hud-coin-img { vertical-align: middle; width: 14px; height: 14px; }
     .hero-pipes { position: relative; bottom: auto; margin-top: auto; margin-bottom: 56px; padding: 0 2%; width: 100%; }
     .pipe { width: 64px; }
     .pipe-cap { width: 80px; height: 20px; }
@@ -943,8 +949,7 @@ a:hover {
         font-size: 0.4rem;
     }
     .hud-label, .hud-value { font-size: 0.7rem; color: #fff; }
-
-    /* Pipes: half size on small phones, flow below text */
+    .hud-coin-img { vertical-align: middle; width: 12px; height: 12px; }
     .hero-pipes { position: relative; bottom: auto; margin-top: auto; margin-bottom: 56px; padding: 0 1%; width: 100%; }
     .pipe { width: 48px; }
     .pipe-cap { width: 60px; height: 16px; }

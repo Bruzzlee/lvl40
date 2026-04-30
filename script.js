@@ -44,15 +44,23 @@ function initSoundEffects() {
     const sound1up  = new Audio('assets/sounds/1up.mp3');
     const soundCoin = new Audio('assets/sounds/coin.mp3');
 
-    // Mushroom: play 1up + jump animation on click
+    // Mushroom: play 1up + jump animation + increment lives on click
     const mushroom = document.querySelector('.oneup-mushroom');
+    const livesEl = document.getElementById('hud-lives');
+    let livesCount = parseInt(localStorage.getItem('marioLives') || '39', 10);
+    if (livesEl) livesEl.textContent = livesCount;
     if (mushroom) {
         mushroom.addEventListener('click', function() {
             sound1up.currentTime = 0;
             sound1up.play();
             mushroom.classList.remove('mushroom-jump');
-            void mushroom.offsetWidth; // reflow to restart animation
+            void mushroom.offsetWidth;
             mushroom.classList.add('mushroom-jump');
+            if (livesCount < 99) {
+                livesCount++;
+                localStorage.setItem('marioLives', livesCount);
+                if (livesEl) livesEl.textContent = livesCount;
+            }
         });
         mushroom.querySelector('img').addEventListener('animationend', function(e) {
             if (e.animationName === 'mushroom-jump') {
