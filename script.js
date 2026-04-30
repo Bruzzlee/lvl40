@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Mario HUD countdown timer
     initMarioHUD();
+
+    // Sound interactions
+    initSoundEffects();
 });
 
 /**
@@ -35,6 +38,39 @@ function initMarioHUD() {
     setInterval(updateTimer, 60000);
 
     // Coin count is fixed at 40 (birthday level)
+}
+
+function initSoundEffects() {
+    const sound1up  = new Audio('assets/sounds/1up.mp3');
+    const soundCoin = new Audio('assets/sounds/coin.mp3');
+
+    // Mushroom: play 1up + jump animation on click
+    const mushroom = document.querySelector('.oneup-mushroom');
+    if (mushroom) {
+        mushroom.style.cursor = 'pointer';
+        mushroom.addEventListener('click', function() {
+            sound1up.currentTime = 0;
+            sound1up.play();
+            mushroom.classList.remove('mushroom-jump');
+            void mushroom.offsetWidth; // reflow to restart animation
+            mushroom.classList.add('mushroom-jump');
+        });
+        mushroom.addEventListener('animationend', function(e) {
+            if (e.animationName === 'mushroom-jump') {
+                mushroom.classList.remove('mushroom-jump');
+            }
+        });
+    }
+
+    // Coin block: play coin sound on click
+    const coinBlock = document.querySelector('.coin-block');
+    if (coinBlock) {
+        coinBlock.style.cursor = 'pointer';
+        coinBlock.addEventListener('click', function() {
+            soundCoin.currentTime = 0;
+            soundCoin.play();
+        });
+    }
 }
 
 // Load translations from JSON file

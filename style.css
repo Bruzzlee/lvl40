@@ -430,6 +430,17 @@ a:hover {
     100% { transform: translateX(-40%); }
 }
 
+@keyframes mushroom-jump {
+    0%   { transform: translateY(0); }
+    40%  { transform: translateY(-40px); }
+    70%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.mushroom-jump {
+    animation: mushroom-jump 0.5s ease-out !important;
+}
+
 /* ============================================
    5. Info Section
    ============================================ */
