@@ -189,7 +189,7 @@ a:hover {
     justify-content: space-around;
     align-items: center;
     font-family: 'Press Start 2P', cursive;
-    font-size: 0.65rem;
+    font-size: 1.3rem;
     flex-wrap: wrap;
     gap: 0.75rem;
 }
@@ -203,12 +203,12 @@ a:hover {
 
 .hud-label {
     color: #fff;
-    font-size: 0.55rem;
+    font-size: 1.1rem;
 }
 
 .hud-value {
     color: #ffd700;
-    font-size: 0.7rem;
+    font-size: 1.4rem;
     text-shadow: 1px 1px 0 #a86800;
 }
 
