@@ -349,6 +349,26 @@ a:hover {
     100% { transform: translateY(0) rotateY(720deg);  opacity: 0; }
 }
 
+@keyframes piranha-grow {
+    0%   { transform: translateY(100%) scaleY(0); opacity: 0; }
+    30%  { transform: translateY(0%) scaleY(1);   opacity: 1; }
+    70%  { transform: translateY(0%) scaleY(1);   opacity: 1; }
+    100% { transform: translateY(100%) scaleY(0); opacity: 0; }
+}
+
+.piranha-popup {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%) scaleY(0);
+    transform-origin: bottom center;
+    width: 80px;
+    pointer-events: none;
+    z-index: 10;
+    image-rendering: pixelated;
+    animation: piranha-grow 2s ease-in-out forwards;
+}
+
 .coin-popup {
     position: fixed;
     width: 32px;
@@ -405,6 +425,8 @@ a:hover {
     align-items: center;
     width: 128px;
     flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
 }
 
 .pipe-cap {

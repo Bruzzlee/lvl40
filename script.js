@@ -95,6 +95,17 @@ function initSoundEffects() {
             coinImg.addEventListener('animationend', () => coinImg.remove());
         });
     }
+    // Pipes: piranha plant grows out on click
+    document.querySelectorAll('.pipe').forEach(pipe => {
+        pipe.addEventListener('click', function() {
+            if (pipe.querySelector('.piranha-popup')) return; // already animating
+            const plant = document.createElement('img');
+            plant.src = 'assets/images/piranha_plant.svg';
+            plant.className = 'piranha-popup';
+            pipe.appendChild(plant);
+            plant.addEventListener('animationend', () => plant.remove());
+        });
+    });
 }
 
 // Load translations from JSON file
