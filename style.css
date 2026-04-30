@@ -438,7 +438,7 @@ a:hover {
     100% { transform: translateY(0); }
 }
 
-.mushroom-jump {
+.mushroom-jump img {
     animation: mushroom-jump 0.5s ease-out !important;
 }
 

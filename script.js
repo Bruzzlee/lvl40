@@ -54,7 +54,7 @@ function initSoundEffects() {
             void mushroom.offsetWidth; // reflow to restart animation
             mushroom.classList.add('mushroom-jump');
         });
-        mushroom.addEventListener('animationend', function(e) {
+        mushroom.querySelector('img').addEventListener('animationend', function(e) {
             if (e.animationName === 'mushroom-jump') {
                 mushroom.classList.remove('mushroom-jump');
             }
