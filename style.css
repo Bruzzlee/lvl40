@@ -322,7 +322,6 @@ a:hover {
 
 .coin-block {
     display: inline-block;
-    position: relative;
     width: 96px;
     height: 96px;
     background: #ffd700;
@@ -344,10 +343,10 @@ a:hover {
 }
 
 @keyframes coin-popup {
-    0%   { transform: translateY(0) rotateY(0deg);    opacity: 1; }
-    40%  { transform: translateY(-70px) rotateY(360deg); opacity: 1; }
-    80%  { transform: translateY(-10px) rotateY(680deg); opacity: 1; }
-    100% { transform: translateY(0) rotateY(720deg);  opacity: 0; }
+    0%   { transform: translateX(-50%) translateY(0) rotateY(0deg);       opacity: 1; }
+    40%  { transform: translateX(-50%) translateY(-70px) rotateY(360deg); opacity: 1; }
+    80%  { transform: translateX(-50%) translateY(-10px) rotateY(680deg); opacity: 1; }
+    100% { transform: translateX(-50%) translateY(0) rotateY(720deg);     opacity: 0; }
 }
 
 @keyframes piranha-grow {
@@ -371,10 +370,7 @@ a:hover {
 }
 
 .coin-popup {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: fixed;
     width: 32px;
     height: 32px;
     pointer-events: none;
