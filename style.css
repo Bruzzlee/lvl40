@@ -342,6 +342,23 @@ a:hover {
     to { transform: translateY(-10px); }
 }
 
+@keyframes coin-popup {
+    0%   { transform: translateY(0) rotateY(0deg);    opacity: 1; }
+    40%  { transform: translateY(-70px) rotateY(360deg); opacity: 1; }
+    80%  { transform: translateY(-10px) rotateY(680deg); opacity: 1; }
+    100% { transform: translateY(0) rotateY(720deg);  opacity: 0; }
+}
+
+.coin-popup {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    z-index: 9999;
+    image-rendering: pixelated;
+    animation: coin-popup 0.8s ease-in forwards;
+}
+
 .headline {
     color: #ffd700;
     margin-bottom: 1.5rem;
