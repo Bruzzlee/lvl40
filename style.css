@@ -447,6 +447,8 @@ a:hover {
     border: 4px solid #000;
     border-top: none;
     box-shadow: inset -4px 0 0 #006000;
+    position: relative;
+    z-index: 2;
 }
 
 /* 1UP mushroom walker */
