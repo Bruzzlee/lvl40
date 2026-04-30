@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Level-UP 40//Birthday Party//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20260815T140000Z
+DTEND:20260815T220000Z
+SUMMARY:Level-UP 40! 🎉
+DESCRIPTION:Join us for Leandro's 40th birthday celebration!\nFriendship\, great beer\, good vibes and a wonderful time together.
+LOCATION:Illnauerstrasse 50\, 8307 Illnau-Effretikon
+URL:https://bruzzlee.github.io/lvl40/
+END:VEVENT
+END:VCALENDAR

@@ -86,12 +86,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     color: #e52521;
     font-family: 'Press Start 2P', cursive;
-    text-shadow: 3px 3px 0 #000;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
 }
 
 h1 {
     font-size: clamp(2.3rem, 6vw, 3.8rem);
-    text-shadow: 4px 4px 0 #000;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.4);
 }
 
 h2 {
@@ -144,9 +144,9 @@ a:hover {
     color: #ffd700;
     padding: 0.75rem 1.5rem;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    position: relative;
+    z-index: 150;
+    margin-top: 3rem;
     border-bottom: 4px solid #000;
     box-shadow: 0 4px 0 #000;
     animation: banner-blink 2s step-end infinite;
@@ -182,7 +182,7 @@ a:hover {
    ============================================ */
 
 .mario-hud {
-    background: #000;
+    background: #5c94fc;
     color: #fff;
     padding: 0.6rem 2rem;
     display: flex;
@@ -190,7 +190,6 @@ a:hover {
     align-items: center;
     font-family: 'Press Start 2P', cursive;
     font-size: 0.65rem;
-    border-bottom: 4px solid #e52521;
     flex-wrap: wrap;
     gap: 0.75rem;
 }
@@ -351,7 +350,7 @@ a:hover {
 .headline {
     color: #ffd700;
     margin-bottom: 1.5rem;
-    text-shadow: 4px 4px 0 #000, 6px 6px 0 #a86800;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
     animation: fadeInDown 0.8s ease;
 }
 
@@ -378,7 +377,7 @@ a:hover {
 /* Pipes */
 .hero-pipes {
     position: absolute;
-    bottom: 60px;
+    bottom: 120px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -523,6 +522,16 @@ a:hover {
 
 .detail-card a:hover { color: #e52521; }
 
+.transport-card a {
+    color: #0000cd;
+    font-weight: 400;
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.transport-card a:hover { color: #e52521; }
+
 .description {
     max-width: 700px;
     margin: 0 auto;
@@ -620,7 +629,7 @@ a:hover {
 .food-drinks h2 {
     text-align: center;
     color: #ffd700;
-    text-shadow: 3px 3px 0 #000;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
     margin-bottom: 2.5rem;
     padding-top: 1rem;
 }
@@ -839,7 +848,8 @@ a:hover {
     h2 { font-size: 1.3rem; }
     h3 { font-size: 1rem; }
 
-    .hero { padding: 5rem 1rem 0; min-height: 65vh; }
+    .hero { padding: 5rem 1rem 0; min-height: 65vh; justify-content: flex-start; }
+    .hero-content { padding-bottom: 1.5rem; }
     .subheadline { font-size: 0.65rem; }
     .info { padding: 4rem 1.5rem; }
     .food-drinks { padding: 4rem 1.5rem; }
@@ -853,6 +863,7 @@ a:hover {
     .description p { font-size: 0.75rem; }
     .transport-card h4 { font-size: 0.75rem; }
     .transport-card p { font-size: 0.75rem; }
+    .transport-card a { font-size: 0.75rem; }
     .food-card h3 { font-size: 1rem; }
     .food-card p { font-size: 0.75rem; }
     .food-note p { font-size: 0.7rem; }
@@ -862,18 +873,19 @@ a:hover {
     .form-open-note { font-size: 0.55rem; }
     .form-note { font-size: 0.55rem; }
 
-    /* HUD: 2×2 grid on tablet */
+    /* HUD: single row, smaller font */
     .mario-hud {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem 1.5rem;
-        padding: 0.6rem 1rem;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        gap: 0.25rem 0.5rem;
+        padding: 0.5rem 0.5rem;
     }
-    .hud-label { font-size: 0.5rem; }
-    .hud-value { font-size: 0.65rem; }
+    .hud-label { font-size: 0.4rem; }
+    .hud-value { font-size: 0.5rem; }
 
-    /* Scale pipes down to half size, keep them visible */
-    .hero-pipes { display: flex; padding: 0 2%; bottom: 56px; }
+    /* Mobile: pipes flow below text, sit just above ground */
+    .hero-pipes { position: relative; bottom: auto; margin-top: auto; margin-bottom: 56px; padding: 0 2%; width: 100%; }
     .pipe { width: 64px; }
     .pipe-cap { width: 80px; height: 20px; }
     .pipe-body { width: 64px; height: 80px; }
@@ -888,7 +900,8 @@ a:hover {
     h2 { font-size: 1.1rem; margin-bottom: 1rem; }
     h3 { font-size: 0.85rem; }
 
-    .hero { padding: 4rem 1rem 0; min-height: 55vh; }
+    .hero { padding: 4rem 1rem 0; min-height: 55vh; justify-content: flex-start; }
+    .hero-content { padding-bottom: 1rem; }
     .coin-block { width: 48px; height: 48px; font-size: 1.4rem; line-height: 40px; }
     .subheadline { font-size: 0.6rem; }
     .info { padding: 3rem 1rem; }
@@ -907,26 +920,29 @@ a:hover {
     .description p { font-size: 0.7rem; }
     .transport-card h4 { font-size: 0.7rem; }
     .transport-card p { font-size: 0.7rem; }
+    .transport-card a { font-size: 0.7rem; }
     .rsvp { padding: 2.5rem 1rem; }
     .registration-highlight p { font-size: 0.65rem; }
     .form-button { padding: 1rem 1.5rem; font-size: 0.6rem; }
     .form-open-note { font-size: 0.5rem; }
     .form-note { font-size: 0.5rem; }
 
-    /* HUD: single column, compact */
+    /* HUD: single row, even smaller font on small phones */
     .mario-hud {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.4rem 1rem;
-        padding: 0.5rem 0.75rem;
-        font-size: 0.5rem;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        gap: 0.2rem 0.4rem;
+        padding: 0.4rem 0.25rem;
+        font-size: 0.4rem;
     }
-    .hud-label { font-size: 0.4rem; }
-    .hud-value { font-size: 0.55rem; }
+    .hud-label { font-size: 0.35rem; }
+    .hud-value { font-size: 0.45rem; }
 
-    /* Pipes: half size on small phones */
-    .hero-pipes { display: flex; padding: 0 1%; bottom: 56px; }
+    /* Pipes: half size on small phones, flow below text */
+    .hero-pipes { position: relative; bottom: auto; margin-top: auto; margin-bottom: 56px; padding: 0 1%; width: 100%; }
     .pipe { width: 48px; }
     .pipe-cap { width: 60px; height: 16px; }
     .pipe-body { width: 48px; height: 60px; }
+    .oneup-mushroom img { width: 32px; height: 32px; }
 }

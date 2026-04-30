@@ -37,7 +37,7 @@ function initMarioHUD() {
 
     // Star count = how many guests registered (simulate via local coin counter)
     let coins = parseInt(localStorage.getItem('marioCoins') || '0', 10);
-    coinsEl.textContent = '\u2605 x ' + coins;
+    coinsEl.textContent = String(coins);
 }
 
 // Load translations from JSON file

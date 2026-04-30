@@ -16,6 +16,11 @@
     </script>
 </head>
 <body>
+    <!-- Registration Banner (first element) -->
+    <div class="registration-banner">
+        <p><span>✨ </span><strong><a href="#form-section" data-i18n="register_banner_link"></a></strong></p>
+    </div>
+
     <!-- Language Switcher -->
     <div class="language-switcher">
         <button class="lang-btn" data-lang="en" title="English">EN</button>
@@ -30,8 +35,7 @@
             <span class="hud-value">004000</span>
         </div>
         <div class="hud-item">
-            <span class="hud-label">&#x25CF; x 40</span>
-            <span class="hud-value" id="hud-coins">&#9733; x 0</span>
+            <span class="hud-label"><img src="assets/images/coin.svg" alt="coin" width="12" height="12" style="image-rendering:pixelated;vertical-align:middle"> × 40</span>
         </div>
         <div class="hud-item">
             <span class="hud-label">WORLD</span>
@@ -43,11 +47,6 @@
         </div>
     </div>
 
-    <!-- Registration Banner -->
-    <div class="registration-banner">
-        <p><span>✨ </span><strong><a href="#form-section" data-i18n="register_banner_link"></a></strong> <span data-i18n="register_banner_help"></span></p>
-    </div>
-
     <!-- Hero Section -->
     <section class="hero">
         <!-- Pixel clouds -->
@@ -55,6 +54,12 @@
             <div class="cloud cloud-1"></div>
             <div class="cloud cloud-2"></div>
             <div class="cloud cloud-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="coin-block">?</div>
+            <h1 class="headline" data-i18n="headline">Level-UP 40!</h1>
+            <p class="subheadline" data-i18n="hero_intro"></p>
         </div>
 
         <!-- Decorative pipes + 1UP mushroom walker -->
@@ -75,12 +80,6 @@
             </div>
         </div>
 
-        <div class="hero-content">
-            <div class="coin-block">?</div>
-            <h1 class="headline" data-i18n="headline">Level-UP 40!</h1>
-            <p class="subheadline" data-i18n="hero_intro"></p>
-        </div>
-
         <!-- Ground -->
         <div class="hero-ground">
             <div class="hero-ground-top"></div>
@@ -97,6 +96,7 @@
                 <div class="detail-card">
                     <h3 data-i18n="date_label"></h3>
                     <p>Saturday, August 15, 2026</p>
+                    <a href="assets/party.ics" download data-i18n="add_to_calendar"></a>
                 </div>
                 
                 <div class="detail-card">
@@ -125,13 +125,14 @@
                     <div class="transport-card">
                         <h4 data-i18n="by_car"></h4>
                         <p data-i18n="parking_text"></p>
+                        <a href="https://maps.app.goo.gl/5CDeeTHcgaWRwJU28" target="_blank" rel="noopener noreferrer" data-i18n="location_link"></a>
                     </div>
                     <div class="transport-card">
                         <h4 data-i18n="by_transport"></h4>
                         <p>
-                            <strong data-i18n="from_station"></strong><br>
-                            <em data-i18n="option1"></em><span data-i18n="walk_time"></span><br>
-                            <em data-i18n="option2"></em><span data-i18n="bus_info"></span>
+                            <span data-i18n="from_station"></span><br>
+                            <span data-i18n="option1"></span><br>
+                            <span data-i18n="option2"></span>
                         </p>
                     </div>
                 </div>
@@ -157,9 +158,8 @@
             </div>
 
             <div class="food-note">
-                <p>
-                    <strong data-i18n="contribute_ask"></strong><span data-i18n="contribute_text"></span>
-                </p>
+                <h3 data-i18n="contribute_ask"></h3>
+                <p data-i18n="contribute_text"></p>
             </div>
         </div>
     </section>
