@@ -18,7 +18,112 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Sound interactions
     initSoundEffects();
+
+    // Mushroom walker: compute pipes and animate mushroom between them
+    initMushroomWalker();
 });
+
+/**
+ * Position-based mushroom walker
+ * Calculates left/right turnaround points from the pipes' DOM positions
+ * and animates the mushroom between them with a viewport-relative speed.
+ */
+function initMushroomWalker() {
+    const container = document.querySelector('.hero-pipes');
+    if (!container) return;
+    const leftPipe = container.querySelector('.pipe-left');
+    const rightPipe = container.querySelector('.pipe-right');
+    const mushroom = container.querySelector('.oneup-mushroom');
+    if (!leftPipe || !rightPipe || !mushroom) return;
+
+    // Ensure CSS animation is disabled (in case cached CSS had it)
+    mushroom.style.animation = 'none';
+
+    let leftX = 0, rightX = 0, mWidth = 0;
+    const GAP = 6; // small gap in px so mushroom doesn't touch pipes
+    const updateBounds = () => {
+        const cRect = container.getBoundingClientRect();
+        const lRect = leftPipe.getBoundingClientRect();
+        const rRect = rightPipe.getBoundingClientRect();
+        const mRect = mushroom.getBoundingClientRect();
+        mWidth = mRect.width || 64;
+
+        // Calculate bounds so the mushroom stops before overlapping the pipes.
+        // leftX: place mushroom's left edge just to the right of left pipe's right edge + GAP
+        leftX = (lRect.right - cRect.left) + GAP;
+        // rightX: place mushroom's left edge so its right edge is just left of right pipe's left edge - GAP
+        rightX = (rRect.left - cRect.left) - mWidth - GAP;
+
+        // Clamp in case layout is tight
+        if (rightX < leftX) {
+            const mid = (leftX + rightX) / 2;
+            leftX = mid - 10;
+            rightX = mid + 10;
+        }
+    };
+
+    updateBounds();
+
+    // Start at left bound so mushroom appears coming from left
+    let x = leftX || 0;
+    let direction = 1; // 1 = moving right, -1 = moving left
+    let rafId = null;
+    let lastTime = null;
+
+    // Speed: make traversal relative to viewport width (so speed scales with screen size)
+    // We choose to cross the full viewport width in ~16.7s to keep feel similar to previous timing
+    const baseCycleSeconds = 16.7;
+    // Mobile-specific speed multiplier (applied when viewport <= MOBILE_MAX_WIDTH)
+    const MOBILE_MAX_WIDTH = 768; // px
+    const MOBILE_SPEED_MULTIPLIER = 1.5; // 1.5x on mobile — tweakable
+
+    function step(timestamp) {
+        if (!lastTime) lastTime = timestamp;
+        const dt = (timestamp - lastTime) / 1000; // seconds
+        lastTime = timestamp;
+
+        const vw = window.innerWidth;
+        const isMobile = vw <= MOBILE_MAX_WIDTH;
+        const multiplier = isMobile ? MOBILE_SPEED_MULTIPLIER : 1;
+        const speed = (vw / baseCycleSeconds) * multiplier; // px per second
+
+        x += direction * speed * dt;
+
+        // Reverse when hitting or exceeding bounds
+        if (x >= rightX) {
+            x = rightX;
+            direction = -1;
+        } else if (x <= leftX) {
+            x = leftX;
+            direction = 1;
+        }
+
+        mushroom.style.transform = `translateX(${Math.round(x)}px)`;
+        rafId = requestAnimationFrame(step);
+    }
+
+    // Start animation
+    rafId = requestAnimationFrame(step);
+
+    // Recalculate bounds on resize and preserve current relative progress
+    let onResize = () => {
+        // compute relative progress between left and right using previous bounds
+        const prevLeft = leftX, prevRight = rightX;
+        const progress = (prevRight > prevLeft) ? (x - prevLeft) / (prevRight - prevLeft) : 0.5;
+        updateBounds();
+        // clamp and set new x based on progress
+        x = leftX + (rightX - leftX) * Math.min(Math.max(progress, 0), 1);
+    };
+
+    window.addEventListener('resize', onResize);
+
+    // Clean up if needed (not strictly necessary for this simple page)
+    // Expose for debugging
+    initMushroomWalker._cleanup = () => {
+        if (rafId) cancelAnimationFrame(rafId);
+        window.removeEventListener('resize', onResize);
+    };
+}
 
 /**
  * Mario HUD: countdown to party date + coin star counter
@@ -48,7 +153,8 @@ function initSoundEffects() {
     // Mushroom: play 1up + jump animation + increment lives on click
     const mushroom = document.querySelector('.oneup-mushroom');
     const livesEl = document.getElementById('hud-lives');
-    let livesCount = parseInt(localStorage.getItem('marioLives') || '39', 10);
+    // Start from initial value on each page load (do not persist across refresh)
+    let livesCount = 39;
     if (livesEl) livesEl.textContent = livesCount;
     if (mushroom) {
         mushroom.addEventListener('click', function() {
@@ -59,7 +165,6 @@ function initSoundEffects() {
             mushroom.classList.add('mushroom-jump');
             if (livesCount < 99) {
                 livesCount++;
-                localStorage.setItem('marioLives', livesCount);
                 if (livesEl) livesEl.textContent = livesCount;
             }
         });
@@ -73,7 +178,8 @@ function initSoundEffects() {
     // Coin block: play coin sound + increment counter on click
     const coinBlock = document.querySelector('.coin-block');
     const coinsEl = document.getElementById('hud-coins');
-    let coinCount = parseInt(localStorage.getItem('marioCoins') || '40', 10);
+    // Start coins from initial value on each page load (do not persist across refresh)
+    let coinCount = 40;
     if (coinsEl) coinsEl.textContent = coinCount;
     if (coinBlock) {
         coinBlock.style.cursor = 'pointer';
@@ -82,7 +188,6 @@ function initSoundEffects() {
             soundCoin.play();
             if (coinCount < 99) {
                 coinCount++;
-                localStorage.setItem('marioCoins', coinCount);
                 if (coinsEl) coinsEl.textContent = coinCount;
             }
             // Spawn coin graphic above the block

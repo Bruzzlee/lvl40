@@ -457,12 +457,13 @@ a:hover {
     flex-direction: column;
     align-items: center;
     gap: 4px;
-    flex: 1;
-    animation: mushroom-walk 16.7s linear infinite;
     pointer-events: auto;
-    position: relative;
+    position: absolute;
+    left: 0;
     bottom: 4px;
+    z-index: 3;
     cursor: pointer;
+    will-change: transform;
 }
 
 .oneup-mushroom img {
@@ -482,11 +483,7 @@ a:hover {
     line-height: 1;
 }
 
-@keyframes mushroom-walk {
-    0%   { transform: translateX(-40%); }
-    50%  { transform: translateX(40%); }
-    100% { transform: translateX(-40%); }
-}
+
 
 @keyframes mushroom-jump {
     0%   { transform: translateY(0); }
