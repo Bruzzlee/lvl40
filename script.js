@@ -149,6 +149,7 @@ function initSoundEffects() {
     const sound1up    = new Audio('assets/sounds/1up.mp3');
     const soundCoin   = new Audio('assets/sounds/coin.mp3');
     const soundRustle = new Audio('assets/sounds/rustle.mp3');
+    const soundVictory = new Audio('assets/sounds/victory.mp3');
 
     // Mushroom: play 1up + jump animation + increment lives on click
     const mushroom = document.querySelector('.oneup-mushroom');
@@ -166,6 +167,10 @@ function initSoundEffects() {
             if (livesCount < 99) {
                 livesCount++;
                 if (livesEl) livesEl.textContent = livesCount;
+                if (livesCount === 99) {
+                    soundVictory.currentTime = 0;
+                    soundVictory.play();
+                }
             }
         });
         mushroom.querySelector('img').addEventListener('animationend', function(e) {
@@ -179,7 +184,7 @@ function initSoundEffects() {
     const coinBlock = document.querySelector('.coin-block');
     const coinsEl = document.getElementById('hud-coins');
     // Start coins from initial value on each page load (do not persist across refresh)
-    let coinCount = 40;
+    let coinCount = 0;
     if (coinsEl) coinsEl.textContent = coinCount;
     if (coinBlock) {
         coinBlock.style.cursor = 'pointer';
@@ -189,6 +194,10 @@ function initSoundEffects() {
             if (coinCount < 99) {
                 coinCount++;
                 if (coinsEl) coinsEl.textContent = coinCount;
+                if (coinCount === 99) {
+                    soundVictory.currentTime = 0;
+                    soundVictory.play();
+                }
             }
             // Spawn coin graphic above the block
             const rect = coinBlock.getBoundingClientRect();
