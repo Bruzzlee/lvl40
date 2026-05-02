@@ -189,8 +189,10 @@ function initSoundEffects() {
     if (coinBlock) {
         coinBlock.style.cursor = 'pointer';
         coinBlock.addEventListener('click', function() {
-            soundCoin.currentTime = 0;
-            soundCoin.play();
+            // Create a fresh Audio instance for each click so rapid/repeated clicks overlap
+            const coinSound = new Audio(soundCoin.src || 'assets/sounds/coin.mp3');
+            coinSound.currentTime = 0;
+            coinSound.play();
             if (coinCount < 99) {
                 coinCount++;
                 if (coinsEl) coinsEl.textContent = coinCount;
